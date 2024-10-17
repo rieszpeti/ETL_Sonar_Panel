@@ -4,7 +4,7 @@ from typing import List, Dict
 from transformers import pipeline
 from pymongo import MongoClient
 
-from src.image_processing_extract.mongodb_repository import MongoDBConfig
+from mongodb_config import MongoDBConfig
 
 
 def fetch_news_articles(api_key: str, query: str) -> List[Dict[str, str]]:

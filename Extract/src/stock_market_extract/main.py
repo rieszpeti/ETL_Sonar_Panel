@@ -7,8 +7,8 @@ from typing import List
 
 from dotenv import load_dotenv
 
-from src.common.logging_config import setup_logging
-from src.stock_market_extract.extract_stock_data import download_stock_data, save_high_to_database
+from logging_config import setup_logging
+from extract_stock_data import download_stock_data, save_high_to_database
 
 
 @dataclass

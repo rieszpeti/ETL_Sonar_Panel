@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 import logging
 
-from src.mongodb_config import MongoDBConfig
+from mongodb_config import MongoDBConfig
 
 
 class MongoDBRepository:
