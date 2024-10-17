@@ -43,7 +43,7 @@ class DataExtractService:
             annotated_image_name = f"annotated_{original_image_name}"
 
             # Save the image to the file system
-            image.save(original_image_name)
+            image.save(annotated_image_name)
             logging.info(f"Annotated image saved to {annotated_image_name}.")
 
             # Upload the saved image to S3
@@ -70,12 +70,13 @@ class DataExtractService:
                 else:
                     logging.info(f"Skipping save to MongoDB. File {result.filename} already exists.")
 
-                # Check if the file exists in S3
                 if not self.s3_repo.is_file_exists(result.filename):
                     self.s3_repo.upload_file(result.image_path)
+                else:
+                    logging.info(f"Skipping upload to S3. File {result.filename} already exists.")
 
-                    if result and 'annotated_image' in result and result.annotated_image is not None:
-                        self._upload_annotated_image(result.filename, result['annotated_image'])
+                if result.annotated_image is not None:
+                    self._upload_annotated_image(result.filename, result.annotated_image)
                 else:
                     logging.info(f"Skipping upload to S3. File {result.filename} already exists.")
 
