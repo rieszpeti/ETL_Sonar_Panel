@@ -7,7 +7,7 @@ from typing import List
 
 from dotenv import load_dotenv
 
-from src.logging_config import setup_logging
+from src.common.logging_config import setup_logging
 from src.stock_market_extract.extract_stock_data import download_stock_data, save_high_to_database
 
 
@@ -63,7 +63,7 @@ def main():
 
     if stock_data is not None:
         logging.info("Processing downloaded data...")
-        save_high_to_database(stock_data, os.getenv('DATABASE_URL'))  # Save high prices to database
+        save_high_to_database(stock_data, os.getenv('POSTGRES_DATABASE_URL'))  # Save high prices to database
     else:
         logging.error("No stock data to process.")
 

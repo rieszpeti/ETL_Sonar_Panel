@@ -6,7 +6,7 @@ from typing import List
 
 from dotenv import load_dotenv
 
-from src.logging_config import setup_logging
+from src.common.logging_config import setup_logging
 from src.mongodb_config import MongoDBConfig
 from extract_news import fetch_news_articles, perform_sentiment_analysis, upload_to_mongodb
 

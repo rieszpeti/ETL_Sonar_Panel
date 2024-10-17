@@ -6,7 +6,7 @@ from extract_image_data_service import DataExtractService
 from mongodb_repository import MongoDBRepository
 from roboflow_model import RoboflowModelFactory
 from s3_repository import S3Config, S3Repository
-from src.logging_config import setup_logging
+from src.common.logging_config import setup_logging
 from src.mongodb_config import MongoDBConfig
 
 
