@@ -1,0 +1,6 @@
+{
+    "symbols": ["AAPL", "MSFT", "GOOGL"],
+    "start": "2022-01-01",
+    "end": "2024-01-01",
+    "connection_string": "stocks.db"
+}

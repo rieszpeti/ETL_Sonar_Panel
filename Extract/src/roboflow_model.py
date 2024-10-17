@@ -10,11 +10,21 @@ from dotenv import load_dotenv
 load_dotenv(os.path.join(os.path.dirname(__file__), '..', '.env'))
 
 
+class ImageProcessingResult:
+    def __init__(self, result_json, annotated_image, project_name, filename, image_path):
+        self.result_json = result_json
+        self.annotated_image = annotated_image
+        self.project_name = project_name
+        self.filename = filename
+        self.image_path = image_path
+
+
 @dataclass
 class RoboflowModelParams:
     api_key: str = field(metadata={'required': True})
     project_name: str = field(metadata={'required': True})
     version_number: int = field(metadata={'required': True})
+    input_folder: str = field(metadata={'required': True})
 
     def __post_init__(self):
         if self.api_key is None:
@@ -23,6 +33,8 @@ class RoboflowModelParams:
             raise ValueError("Project name must not be None.")
         if self.version_number is None:
             raise ValueError("Version number must not be None.")
+        if self.input_folder is None:
+            raise ValueError("Input folder number must not be None.")
 
 
 class RoboflowModel:
@@ -39,64 +51,99 @@ class RoboflowModel:
             logging.error("Error initializing model: %s", e)
             return None
 
-    def predict_and_annotate(self, image_path, confidence=40):
+    def predict_and_annotate(self, image_path):
         try:
-            result = self.model.predict(image_path, confidence=confidence).json()
-            labels = [item["class"] for item in result["predictions"]]
+            result_json = self.model.predict(image_path).json()
+            try:
+                labels = [item["class"] for item in result_json["predictions"]]
 
-            detections = sv.Detections.from_inference(result)
+                detections = sv.Detections.from_inference(result_json)
 
-            logging.info(f"Total detections: {len(detections)}")
+                logging.info(f"Total detections: {len(detections)}")
 
-            # Filter by class
-            detections = detections[detections.class_id == 0]
-            logging.info(f"Filtered detections: {len(detections)}")
+                # annotate image
+                label_annotator = sv.LabelAnnotator()
+                mask_annotator = sv.MaskAnnotator()
 
-            label_annotator = sv.LabelAnnotator()
-            mask_annotator = sv.MaskAnnotator()
+                image = cv2.imread(image_path)
 
-            image = cv2.imread(image_path)
+                annotated_image = mask_annotator.annotate(scene=image, detections=detections)
+                annotated_image = label_annotator.annotate(scene=annotated_image, detections=detections, labels=labels)
 
-            annotated_image = mask_annotator.annotate(scene=image, detections=detections)
-            annotated_image = label_annotator.annotate(scene=annotated_image, detections=detections, labels=labels)
+                return result_json, annotated_image
 
-            return annotated_image
+            except Exception as e:
+                logging.error("Error predicting and annotating image %s: %s", image_path, e)
+
+            return result_json, None
+
         except Exception as e:
             logging.error("Error predicting and annotating image %s: %s", image_path, e)
             return None
 
-    def process_images_from_folder(self, folder_path):
-        for filename in os.listdir(folder_path):
+    def process_images_from_folder(self):
+        """
+        for filename in os.listdir(self.params.input_folder):
             if filename.endswith(".jpg"):
-                image_path = os.path.join(folder_path, filename)
+                image_path = os.path.join(self.params.input_folder, filename)
                 logging.info(f"Processing {filename}")
 
-                annotated_image = self.predict_and_annotate(image_path)
+                result_json, annotated_image = self.predict_and_annotate(image_path)
 
-                if annotated_image is not None:
-                    #upload image to db
-                    logging.info(f"Annotated image saved: annotated_{filename}")
+                if result_json is not None:
+                    return ImageProcessingResult(
+                        result_json=result_json,
+                        annotated_image=annotated_image,
+                        project_name=self.params.project_name,
+                        filename=filename
+                    )
                 else:
                     logging.warning(f"Failed to annotate image: {filename}")
+
+        """
+        filename = os.listdir(self.params.input_folder)[0]
+        if filename.endswith(".jpg"):
+            image_path = os.path.join(self.params.input_folder, filename)
+            logging.info(f"Processing {filename}")
+
+            result_json, annotated_image = self.predict_and_annotate(image_path)
+
+            if result_json is not None:
+                return ImageProcessingResult(
+                    result_json=result_json,
+                    annotated_image=annotated_image,
+                    project_name=self.params.project_name,
+                    filename=filename,
+                    image_path=image_path
+                )
+            else:
+                logging.warning(f"Failed to annotate image: {filename}")
+
+
+class RoboflowModelFactory:
+    @staticmethod
+    def create_model(api_key: str, project_name: str, version_number: int, input_folder: str) -> RoboflowModel:
+        """Creates and returns an instance of RoboflowModel with the provided parameters."""
+        params = RoboflowModelParams(api_key, project_name, version_number, input_folder)
+        return RoboflowModel(params)
 
 
 def main():
     api_key = os.getenv("ROBOFLOW_API_KEY")
+    version_number = 1
+    input_folder = "../resources/roof_satellite/pictures"
 
-    project_name = "roof-segmentation-qmhbb"
-    version_number = 7
-    input_folder = "../resources/roof_from_streetview/pictures"
+    # Create satellite image model using the factory
+    satellite_project_name = "roof-type-classifier-bafod"
+    satellite_image_model = RoboflowModelFactory.create_model(api_key, satellite_project_name, version_number,
+                                                              input_folder)
+    satellite_image_model.process_images_from_folder()
 
-    params = RoboflowModelParams(api_key, project_name, version_number)
-
-    satellite_image_model = RoboflowModel(params)
-    satellite_image_model.process_images_from_folder(input_folder)
-
-    # mekkora a lefedettseg?
-    project_name = "solar-panels-81zxz/1"
-
-    streetview_image_model = RoboflowModel(RoboflowModelParams(api_key, project_name, version_number))
-    streetview_image_model.process_images_from_folder(input_folder)
+    # Create streetview image model using the factory
+    streetview_project_name = "solar-panels-81zxz"
+    streetview_image_model = RoboflowModelFactory.create_model(api_key, streetview_project_name, version_number,
+                                                               input_folder)
+    streetview_image_model.process_images_from_folder()
 
 
 if __name__ == "__main__":

@@ -1,15 +1,30 @@
+import os
+
 import boto3
 import logging
 from botocore.exceptions import NoCredentialsError, ClientError
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 
 @dataclass
 class S3Config:
-    endpoint_url: str
-    region_name: str = 'us-east-1'
-    aws_access_key_id: str = 'test'
-    aws_secret_access_key: str = 'test'
+    endpoint_url: str = field(metadata={'required': True})
+    region_name: str = field(metadata={'required': True})
+    bucket_name: str = field(metadata={'required': True})
+    aws_access_key_id: str = field(metadata={'required': True})
+    aws_secret_access_key: str = field(metadata={'required': True})
+
+    def __post_init__(self):
+        if not self.endpoint_url:
+            raise ValueError("The endpoint URL must not be empty.")
+        if not self.region_name:
+            raise ValueError("The region name must not be empty.")
+        if not self.bucket_name:
+            raise ValueError("The bucket name URL must not be empty.")
+        if not self.aws_access_key_id:
+            raise ValueError("AWS Access Key ID must not be empty.")
+        if not self.aws_secret_access_key:
+            raise ValueError("AWS Secret Access Key must not be empty.")
 
 
 class S3Repository:
@@ -22,27 +37,27 @@ class S3Repository:
             aws_secret_access_key=config.aws_secret_access_key
         )
 
-    def create_bucket(self, bucket_name):
-        try:
-            self.s3_client.create_bucket(Bucket=bucket_name)
-            logging.info(f"Bucket {bucket_name} created successfully.")
-        except ClientError as e:
-            logging.error(f"Error creating bucket {bucket_name}: {e}")
-            raise
+        self.bucket_name = config.bucket_name
 
-    def upload_file(self, file_path, bucket_name, object_name):
+    def upload_file(self, file_path):
+        object_name = os.path.basename(file_path)
         try:
-            self.s3_client.upload_file(file_path, bucket_name, object_name)
-            logging.info(f"File {object_name} uploaded to {bucket_name}.")
+            self.s3_client.upload_file(file_path, self.bucket_name, object_name)
+            logging.info(f"File {object_name} uploaded to {self.bucket_name}.")
         except NoCredentialsError:
             logging.error("Credentials not available")
         except ClientError as e:
-            logging.error(f"Error uploading file to {bucket_name}: {e}")
+            logging.error(f"Error uploading file to {self.bucket_name}: {e}")
 
-    def download_file(self, bucket_name, object_name, file_path):
+    def is_file_exists(self, object_name):
         try:
-            self.s3_client.download_file(bucket_name, object_name, file_path)
-            logging.info(f"File {object_name} downloaded from {bucket_name}.")
+            self.s3_client.head_object(Bucket=self.bucket_name, Key=object_name)
+            logging.info(f"File {object_name} exists in {self.bucket_name}.")
+            return True
         except ClientError as e:
-            logging.error(f"Error downloading file from {bucket_name}: {e}")
-
+            if e.response['Error']['Code'] == '404':
+                logging.info(f"File {object_name} does not exist in {self.bucket_name}.")
+                return False
+            else:
+                logging.error(f"Error checking file in {self.bucket_name}: {e}")
+                raise
