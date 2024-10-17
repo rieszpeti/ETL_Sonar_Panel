@@ -54,6 +54,8 @@ class RoboflowModel:
     def predict_and_annotate(self, image_path):
         try:
             result_json = self.model.predict(image_path).json()
+
+            # not a nice pattern but it is okay now to keep it simple
             try:
                 labels = [item["class"] for item in result_json["predictions"]]
 
