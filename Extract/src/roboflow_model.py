@@ -75,7 +75,7 @@ class RoboflowModel:
                 return result_json, annotated_image
 
             except Exception as e:
-                logging.error("Error predicting and annotating image %s: %s", image_path, e)
+                logging.info("Error predicting and annotating image %s: %s", image_path, e)
 
             return result_json, None
 
