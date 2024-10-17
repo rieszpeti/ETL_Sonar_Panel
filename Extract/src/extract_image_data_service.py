@@ -66,7 +66,8 @@ class DataExtractService:
             if result.filename:
                 if not self.mongo_repo.is_file_exists(result_filename):
                     self.mongo_repo.upload_document(result.result_json,
-                                                    result_filename)
+                                                    result_filename,
+                                                    result.project_name)
                 else:
                     logging.info(f"Skipping save to MongoDB. File {result.filename} already exists.")
 
@@ -101,12 +102,10 @@ def main():
         },
     ]
 
-    # Initialize the MongoDB configuration
     mongo_config = MongoDBConfig(
         connection_string=os.getenv('MONGODB_CONNECTION_STRING'),
         db_name=os.getenv('MONGODB_DB_NAME'),
-        username=os.getenv('MONGO_USERNAME'),
-        password=os.getenv('MONGO_PASSWORD')
+        collection_name=os.getenv('MONGODB_DB_COLLECTION')
     )
 
     s3_config = S3Config(

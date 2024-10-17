@@ -5,10 +5,12 @@ from dotenv import load_dotenv
 from src.extract_historical_stock_data import download_stock_data
 from src.extract_news import fetch_news_articles
 
+
 def load_config(config_file):
     with open(config_file, 'r') as file:
         config = json.load(file)
     return config
+
 
 if __name__ == "__main__":
     # Load configuration from JSON file
