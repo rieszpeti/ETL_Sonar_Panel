@@ -1,14 +1,9 @@
 import json
 import logging
-from dataclasses import dataclass, field
-from datetime import datetime
-from typing import List
 import pandas as pd
 import yfinance as yf
-import os
 from sqlalchemy import create_engine, text
 from sqlalchemy.exc import IntegrityError
-from dotenv import load_dotenv
 
 
 def download_stock_data(symbols, start, end):

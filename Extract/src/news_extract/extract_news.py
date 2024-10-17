@@ -1,10 +1,6 @@
-import json
-import os
 import requests
 import logging
-from dataclasses import dataclass, field
 from typing import List, Dict
-from dotenv import load_dotenv
 from transformers import pipeline
 from pymongo import MongoClient
 

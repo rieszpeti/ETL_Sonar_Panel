@@ -1,6 +1,5 @@
 from pymongo import MongoClient
 import logging
-from dataclasses import dataclass, field
 
 from src.mongodb_config import MongoDBConfig
 

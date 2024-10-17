@@ -1,14 +1,14 @@
 import json
 import logging
 import os
-from dataclasses import field
+from dataclasses import field, dataclass
 from typing import List
 
 from dotenv import load_dotenv
 
 from src.logging_config import setup_logging
 from src.mongodb_config import MongoDBConfig
-from src.news_extract.extract_news import fetch_news_articles, perform_sentiment_analysis, upload_to_mongodb
+from extract_news import fetch_news_articles, perform_sentiment_analysis, upload_to_mongodb
 
 
 @dataclass
