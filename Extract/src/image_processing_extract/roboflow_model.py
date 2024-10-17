@@ -84,7 +84,6 @@ class RoboflowModel:
             return None
 
     def process_images_from_folder(self):
-        """
         for filename in os.listdir(self.params.input_folder):
             if filename.endswith(".jpg"):
                 image_path = os.path.join(self.params.input_folder, filename)
@@ -120,6 +119,7 @@ class RoboflowModel:
                 )
             else:
                 logging.warning(f"Failed to annotate image: {filename}")
+        """
 
 
 class RoboflowModelFactory:
@@ -128,25 +128,3 @@ class RoboflowModelFactory:
         """Creates and returns an instance of RoboflowModel with the provided parameters."""
         params = RoboflowModelParams(api_key, project_name, version_number, input_folder)
         return RoboflowModel(params)
-
-
-def main():
-    api_key = os.getenv("ROBOFLOW_API_KEY")
-    version_number = 1
-    input_folder = "../resources/roof_satellite/pictures"
-
-    # Create satellite image model using the factory
-    satellite_project_name = "roof-type-classifier-bafod"
-    satellite_image_model = RoboflowModelFactory.create_model(api_key, satellite_project_name, version_number,
-                                                              input_folder)
-    satellite_image_model.process_images_from_folder()
-
-    # Create streetview image model using the factory
-    streetview_project_name = "solar-panels-81zxz"
-    streetview_image_model = RoboflowModelFactory.create_model(api_key, streetview_project_name, version_number,
-                                                               input_folder)
-    streetview_image_model.process_images_from_folder()
-
-
-if __name__ == "__main__":
-    main()

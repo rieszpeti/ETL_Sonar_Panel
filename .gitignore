@@ -1,3 +1,4 @@
 ﻿Extract/.env
 .idea
 Extract/src/__pycache__
+*.env

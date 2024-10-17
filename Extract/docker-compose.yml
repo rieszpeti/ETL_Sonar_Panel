@@ -1,0 +1,84 @@
+version: '3.8'
+
+services:
+  image_process_extractor:
+    build:
+      context: .
+      dockerfile: src/image_processing_extract/Dockerfile
+    container_name: image_process_extractor
+    volumes:
+      - ./logs:/app/logs
+    depends_on:
+      - mongodb
+      - localstack_container
+
+  news_extractor:
+    build:
+      context: .
+      dockerfile: src/news_extract/Dockerfile
+    container_name: news_extractor
+    volumes:
+      - ./logs:/app/logs
+    depends_on:
+      - timescaledb
+      - mongodb
+
+  stock_market_extractor:
+    build:
+      context: .
+      dockerfile: src/stock_market_extract/Dockerfile
+    container_name: stock_market_extractor
+    volumes:
+      - ./logs:/app/logs
+    depends_on:
+      - timescaledb
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=satellite-image
+    volumes:
+      - mongo_data:/data/db
+
+  localstack_container:
+      image: localstack/localstack
+      container_name: localstack_container
+      ports:
+        - "4566:4566"
+        - "4571:4571"
+      environment:
+        - SERVICES=s3
+        - AWS_ACCESS_KEY_ID=test
+        - AWS_SECRET_ACCESS_KEY=test
+      volumes:
+        - localstack_data:/var/lib/localstack
+      command: [ "localstack", "start" ]
+
+  timescaledb:
+      image: timescale/timescaledb:latest-pg16
+      container_name: timescaledb
+      ports:
+        - "5432:5432"
+      environment:
+        - POSTGRES_DB=stock_data
+        - POSTGRES_USER=test
+        - POSTGRES_PASSWORD=test
+      volumes:
+        - timescaledb_data:/var/lib/postgresql/data
+      command: >
+        sh -c "
+        docker-entrypoint.sh postgres &
+        sleep 10 &&
+        psql -U test -d stock_data -c '
+        CREATE SCHEMA stock;
+        CREATE TABLE stock.stock_data (
+          date DATE NOT NULL,
+          symbol TEXT NOT NULL,
+          price FLOAT NOT NULL,
+          PRIMARY KEY (symbol, date)
+        );
+        SELECT create_hypertable('stock.stock_data', 'date');'
+        "

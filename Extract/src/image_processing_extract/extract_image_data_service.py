@@ -4,9 +4,9 @@ import os
 import numpy as np
 from PIL import Image
 
-from src.roboflow_model import RoboflowModel, RoboflowModelFactory
-from src.mongodb_repository import MongoDBRepository, MongoDBConfig
-from src.s3_repository import S3Repository, S3Config
+from roboflow_model import RoboflowModelFactory
+from mongodb_repository import MongoDBRepository
+from s3_repository import S3Repository, S3Config
 
 
 class DataExtractService:
@@ -80,55 +80,3 @@ class DataExtractService:
                     self._upload_annotated_image(result.filename, result.annotated_image)
                 else:
                     logging.info(f"Skipping upload to S3. File {result.filename} already exists.")
-
-        print(" ")
-
-
-def main():
-    models_config = [
-        {
-            'api_key': os.getenv("ROBOFLOW_API_KEY"),
-            'project_name': "roof-type-classifier-bafod",
-            'version_number': 1,
-            'input_folder': "../resources/roof_satellite/pictures",
-            'model_name': "satellite_image_model"
-        },
-        {
-            'api_key': os.getenv("ROBOFLOW_API_KEY"),
-            'project_name': "solar-panels-81zxz",
-            'version_number': 1,
-            'input_folder': "../resources/roof_satellite/pictures",
-            'model_name': "streetview_image_model"
-        },
-    ]
-
-    mongo_config = MongoDBConfig(
-        connection_string=os.getenv('MONGODB_CONNECTION_STRING'),
-        db_name=os.getenv('MONGODB_DB_NAME'),
-        collection_name=os.getenv('MONGODB_DB_COLLECTION')
-    )
-
-    s3_config = S3Config(
-        endpoint_url=os.getenv('S3_ENDPOINT_URL'),
-        bucket_name=os.getenv('S3_BUCKET_NAME'),
-        region_name=os.getenv('S3_REGION_NAME'),
-        aws_access_key_id=os.getenv('AWS_ACCESS_KEY_ID'),
-        aws_secret_access_key=os.getenv('AWS_SECRET_ACCESS_KEY')
-    )
-
-    roboflow_model_factory = RoboflowModelFactory()
-    mongo_repo = MongoDBRepository(mongo_config)  # Instantiate your MongoDB repository
-    s3_repo = S3Repository(s3_config)  # Instantiate your S3 repository
-
-    data_service = DataExtractService(
-        roboflow_model_factory,
-        models_config,
-        mongo_repo,
-        s3_repo
-    )
-
-    data_service.process_images()
-
-
-if __name__ == '__main__':
-    main()
