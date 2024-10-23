@@ -39,6 +39,30 @@ class S3Repository:
 
         self.bucket_name = config.bucket_name
 
+        self._create_bucket()
+
+    def _bucket_exists(self):
+        try:
+            self.s3_client.head_bucket(Bucket=self.bucket_name)
+            return True
+        except ClientError:
+            return False
+
+    def _create_bucket(self):
+        if not self._bucket_exists():
+            try:
+                self.s3_client.create_bucket(
+                    Bucket=self.bucket_name,
+                    CreateBucketConfiguration={
+                        'LocationConstraint': self.s3_client.meta.region_name
+                    }
+                )
+                print(f'Bucket "{self.bucket_name}" created successfully.')
+            except ClientError as e:
+                print(f'Error creating bucket: {e}')
+        else:
+            print(f'Bucket "{self.bucket_name}" already exists.')
+
     def upload_file(self, file_path):
         object_name = os.path.basename(file_path)
         try:

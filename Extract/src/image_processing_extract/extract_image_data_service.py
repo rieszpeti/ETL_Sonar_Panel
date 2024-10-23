@@ -6,7 +6,7 @@ from PIL import Image
 
 from roboflow_model import RoboflowModelFactory
 from mongodb_repository import MongoDBRepository
-from s3_repository import S3Repository, S3Config
+from s3_repository import S3Repository
 
 
 class DataExtractService:
@@ -59,24 +59,24 @@ class DataExtractService:
     def process_images(self):
         for model_name, roboflow_model in self.roboflow_models.items():
             logging.info(f"Processing images for model: {model_name}")
-            result = roboflow_model.process_images_from_folder()
+            for result in roboflow_model.process_images_from_folder():
+                if result is not None:
+                    result_filename = f"{result.project_name}_{result.filename}"
 
-            result_filename = f"{result.project_name}_{result.filename}"
+                    if result.filename:
+                        if not self.mongo_repo.is_file_exists(result_filename):
+                            self.mongo_repo.upload_document(result.result_json,
+                                                            result_filename,
+                                                            result.project_name)
+                        else:
+                            logging.info(f"Skipping save to MongoDB. File {result.filename} already exists.")
 
-            if result.filename:
-                if not self.mongo_repo.is_file_exists(result_filename):
-                    self.mongo_repo.upload_document(result.result_json,
-                                                    result_filename,
-                                                    result.project_name)
-                else:
-                    logging.info(f"Skipping save to MongoDB. File {result.filename} already exists.")
+                        if not self.s3_repo.is_file_exists(result.filename):
+                            self.s3_repo.upload_file(result.image_path)
+                        else:
+                            logging.info(f"Skipping upload to S3. File {result.filename} already exists.")
 
-                if not self.s3_repo.is_file_exists(result.filename):
-                    self.s3_repo.upload_file(result.image_path)
-                else:
-                    logging.info(f"Skipping upload to S3. File {result.filename} already exists.")
-
-                if result.annotated_image is not None:
-                    self._upload_annotated_image(result.filename, result.annotated_image)
-                else:
-                    logging.info(f"Skipping upload to S3. File {result.filename} already exists.")
+                        if result.annotated_image is not None:
+                            self._upload_annotated_image(result.filename, result.annotated_image)
+                        else:
+                            logging.info(f"Skipping upload to S3. File {result.filename} already exists.")

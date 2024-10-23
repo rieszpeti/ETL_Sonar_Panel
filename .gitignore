@@ -2,3 +2,4 @@
 .idea
 Extract/src/__pycache__
 *.env
+Extract/docker

@@ -24,7 +24,6 @@ class NewsConfig:
 
 
 def load_config(filename: str) -> NewsConfig:
-    """Load configuration from a JSON file and return NewsConfig."""
     with open(filename, 'r') as file:
         json_data = file.read()
     return NewsConfig.from_json(json_data)

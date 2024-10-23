@@ -63,7 +63,7 @@ def main():
 
     if stock_data is not None:
         logging.info("Processing downloaded data...")
-        save_high_to_database(stock_data, os.getenv('POSTGRES_DATABASE_URL'))  # Save high prices to database
+        save_high_to_database(stock_data, os.getenv('POSTGRES_DATABASE_URL'))
     else:
         logging.error("No stock data to process.")
 

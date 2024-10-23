@@ -81,7 +81,10 @@ class RoboflowModel:
             return None
 
     def process_images_from_folder(self):
-        for filename in os.listdir(self.params.input_folder):
+        filenames = os.listdir(self.params.input_folder)
+        logging.info(f"Start processing {len(filenames)}")
+
+        for filename in filenames:
             if filename.endswith(".jpg"):
                 image_path = os.path.join(self.params.input_folder, filename)
                 logging.info(f"Processing {filename}")
@@ -89,11 +92,12 @@ class RoboflowModel:
                 result_json, annotated_image = self.predict_and_annotate(image_path)
 
                 if result_json is not None:
-                    return ImageProcessingResult(
+                    yield ImageProcessingResult(
                         result_json=result_json,
                         annotated_image=annotated_image,
                         project_name=self.params.project_name,
-                        filename=filename
+                        filename=filename,
+                        image_path=image_path
                     )
                 else:
                     logging.warning(f"Failed to annotate image: {filename}")

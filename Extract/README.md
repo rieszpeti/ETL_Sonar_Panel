@@ -23,3 +23,17 @@ CREATE TABLE stock.stock_data (
 SELECT create_hypertable('stock.stock_data', 'date');
 "
 
+docker compose up --build --force-recreate --no-deps [-d] [<service_name>..]
+
+docker compose up --build --force-recreate --no-deps -d image_process_extractor
+
+docker compose build --no-cache [<service_name>..]
+
+docker compose build --no-cache image_process_extractor
+
+
+docker compose build --no-cache stock_market_extractor
+
+docker compose up --build --force-recreate --no-deps -d stock_market_extractor
+
+'postgresql+psycopg2://yourUserDBName:yourUserDBPassword@yourDBDockerContainerName/yourDBName'

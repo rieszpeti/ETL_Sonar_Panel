@@ -1,5 +1,7 @@
 import os
+import time
 
+import logging
 from dotenv import load_dotenv
 
 from extract_image_data_service import DataExtractService
@@ -56,8 +58,10 @@ def main():
         s3_repo
     )
 
-    data_service.process_images()
-
+    try:
+        data_service.process_images()
+    except Exception as e:
+        logging.error(e)
 
 if __name__ == '__main__':
     main()

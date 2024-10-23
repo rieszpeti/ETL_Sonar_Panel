@@ -1,6 +1,7 @@
 import requests
 import logging
 from typing import List, Dict
+from datetime import datetime
 from transformers import pipeline
 from pymongo import MongoClient
 
@@ -43,6 +44,10 @@ def upload_to_mongodb(dbconfig: MongoDBConfig,
     db = client[dbconfig.db_name]
     collection = db[dbconfig.collection_name]
 
+    current_date = datetime.now().strftime("%Y-%m-%d") 
+    logging.info("Current date: %s", current_date) 
+
+
     for article, sentiment in zip(articles, sentiment_results):
         if collection.find_one({"title": article['title']}):
             logging.info("Article already exists in the database: %s", article['title'])
@@ -52,7 +57,8 @@ def upload_to_mongodb(dbconfig: MongoDBConfig,
             'title': article['title'],
             'content': article['content'],
             'sentiment_label': sentiment['label'],
-            'sentiment_score': sentiment['score']
+            'sentiment_score': sentiment['score'],
+            'date_fetched': current_date
         }
         collection.insert_one(data)
         logging.info("Inserted article: %s", article['title'])

@@ -1,37 +1,81 @@
-version: '3.8'
-
 services:
   image_process_extractor:
     build:
-      context: .
-      dockerfile: src/image_processing_extract/Dockerfile
+      context: ./src/image_processing_extract/
+      dockerfile: Dockerfile
     container_name: image_process_extractor
+    env_file:
+      - path: src/image_processing_extract/.env
+      - path: ./docker/docker_envs/image_process_extractor.env
     volumes:
-      - ./logs:/app/logs
+      - ./docker/logs/image_process_extractor:/app/logs
+      - ./src/image_processing_extract/resources/roof_satellite/pictures:/app/resources/roof_satellite/pictures
     depends_on:
-      - mongodb
-      - localstack_container
+      mongodb:
+        condition: service_started
+      localstack_container:
+        condition: service_healthy
+      create_bucket:
+        condition: service_completed_successfully
+
+  upload_images_webpage:
+    build:
+      context: ./src/upload_images/
+      dockerfile: Dockerfile
+    container_name: upload_images_webpage
+    ports:
+      - "8842:80"
+    volumes:
+      - ./src/image_processing_extract/resources/roof_satellite/pictures:/app/uploads
 
   news_extractor:
     build:
-      context: .
-      dockerfile: src/news_extract/Dockerfile
+      context: ./src/news_extract/
+      dockerfile: Dockerfile
     container_name: news_extractor
+    env_file:
+      - path: src/news_extract/.env
+      - path: ./docker/docker_envs/news_extractor.env
     volumes:
-      - ./logs:/app/logs
+      - ./docker/logs/news_extractor:/app/logs
     depends_on:
       - timescaledb
       - mongodb
 
   stock_market_extractor:
     build:
-      context: .
-      dockerfile: src/stock_market_extract/Dockerfile
+      context: ./src/stock_market_extract/
+      dockerfile: Dockerfile
     container_name: stock_market_extractor
+    env_file:
+      - path: src/stock_market_extract/.env
+      - path: ./docker/docker_envs/stock_market_extractor.env
+    environment:
+      - TZ=America/New_York
     volumes:
-      - ./logs:/app/logs
+      - ./docker/logs/stock_market_extractor:/app/logs
     depends_on:
-      - timescaledb
+      timescaledb:
+        condition: service_healthy
+
+  # restart the image_process_extractor and 
+  # news_extractor and stock_market_extractor
+  # once a week
+  # restarter:
+  #   image: docker:cli
+  #   restart: unless-stopped
+  #   volumes: ["/var/run/docker.sock:/var/run/docker.sock"]
+  #   entrypoint: ["/bin/sh", "-c"]
+  #   command:
+  #     - |
+  #       while true; do
+  #         if [ "$$(date +'%u')" -eq 7 ] && [ "$$(date +'%H:%M')" = '20:00' ]; then
+  #           docker restart news_extractor
+  #           docker restart image_process_extractor
+  #           docker restart stock_market_extractor
+  #         fi
+  #         sleep 60
+  #       done
 
   mongodb:
     image: mongo:latest
@@ -41,7 +85,7 @@ services:
     environment:
       - MONGO_INITDB_DATABASE=satellite-image
     volumes:
-      - mongo_data:/data/db
+      - ./docker/mongo_data:/data/db
 
   localstack_container:
       image: localstack/localstack
@@ -54,31 +98,42 @@ services:
         - AWS_ACCESS_KEY_ID=test
         - AWS_SECRET_ACCESS_KEY=test
       volumes:
-        - localstack_data:/var/lib/localstack
+        - ./docker/localstack_data:/var/lib/localstack
       command: [ "localstack", "start" ]
 
+  create_bucket:
+    image: amazon/aws-cli
+    container_name: create_bucket
+    depends_on:
+      - localstack_container
+    entrypoint: ["sh", "-c"]
+    command: |
+      "sleep 15 && aws --endpoint-url=http://host.docker.internal:4566 s3api create-bucket --bucket satellite-image --region us-east-1"
+    environment:
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+
   timescaledb:
-      image: timescale/timescaledb:latest-pg16
-      container_name: timescaledb
-      ports:
-        - "5432:5432"
-      environment:
-        - POSTGRES_DB=stock_data
-        - POSTGRES_USER=test
-        - POSTGRES_PASSWORD=test
-      volumes:
-        - timescaledb_data:/var/lib/postgresql/data
-      command: >
-        sh -c "
-        docker-entrypoint.sh postgres &
-        sleep 10 &&
-        psql -U test -d stock_data -c '
-        CREATE SCHEMA stock;
-        CREATE TABLE stock.stock_data (
-          date DATE NOT NULL,
-          symbol TEXT NOT NULL,
-          price FLOAT NOT NULL,
-          PRIMARY KEY (symbol, date)
-        );
-        SELECT create_hypertable('stock.stock_data', 'date');'
-        "
+    image: timescale/timescaledb:latest-pg16
+    container_name: timescaledb
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=stock_data
+      - PGUSER=test
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=test
+    volumes:
+      - ./docker/timescaledb_data:/var/lib/postgresql/data
+      - ./docker/sql/create_tables.sql:/docker-entrypoint-initdb.d/initdb.sql
+    restart: unless-stopped
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d postgres" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+volumes:
+  mongo_data:
+  localstack_data:
+  timescaledb_data:
