@@ -7,9 +7,7 @@ app = FastAPI()
 UPLOAD_DIRECTORY = "uploads"
 os.makedirs(UPLOAD_DIRECTORY, exist_ok=True) 
 
-@app.get("/", response_class=HTMLResponse)
-async def upload_form():
-    return """
+html = """
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -75,13 +73,17 @@ async def upload_form():
     </html>
     """
 
-@app.post("/upload")
+@app.get("/", response_class=HTMLResponse)
+async def upload_form():
+    return html
+
+
+@app.post("/upload", response_class=HTMLResponse)
 async def upload_file(file: UploadFile = File(...)):
-    # Save the file to the specified directory
     file_location = os.path.join(UPLOAD_DIRECTORY, file.filename)
     
     with open(file_location, "wb") as file_object:
         file_content = await file.read()
         file_object.write(file_content)
 
-    return {"filename": file.filename}
+    return html

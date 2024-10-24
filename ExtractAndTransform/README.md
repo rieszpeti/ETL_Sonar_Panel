@@ -34,6 +34,10 @@ docker compose build --no-cache image_process_extractor
 
 docker compose build --no-cache stock_market_extractor
 
+docker compose build --no-cache upload_images_webpage
+
 docker compose up --build --force-recreate --no-deps -d stock_market_extractor
 
 'postgresql+psycopg2://yourUserDBName:yourUserDBPassword@yourDBDockerContainerName/yourDBName'
+
+

@@ -1,22 +1,22 @@
 services:
-  image_process_extractor:
-    build:
-      context: ./src/image_processing_extract/
-      dockerfile: Dockerfile
-    container_name: image_process_extractor
-    env_file:
-      - path: src/image_processing_extract/.env
-      - path: ./docker/docker_envs/image_process_extractor.env
-    volumes:
-      - ./docker/logs/image_process_extractor:/app/logs
-      - satellite_images:/app/resources/roof_satellite/pictures
-    depends_on:
-      mongodb:
-        condition: service_started
-      localstack_container:
-        condition: service_healthy
-      create_bucket:
-        condition: service_completed_successfully
+  # image_process_extractor:
+  #   build:
+  #     context: ./src/image_processing_extract/
+  #     dockerfile: Dockerfile
+  #   container_name: image_process_extractor
+  #   env_file:
+  #     - path: src/image_processing_extract/.env
+  #     - path: ./docker/docker_envs/image_process_extractor.env
+  #   volumes:
+  #     - ./docker/logs/image_process_extractor:/app/logs
+  #     - satellite_images:/app/resources/roof_satellite/pictures
+  #   depends_on:
+  #     mongodb:
+  #       condition: service_started
+  #     localstack_container:
+  #       condition: service_healthy
+  #     create_bucket:
+  #       condition: service_completed_successfully
 
   upload_images_webpage:
     build:

@@ -3,3 +3,5 @@
 Extract/src/__pycache__
 *.env
 Extract/docker
+ExtractAndTransform/docker
+ExtractAndTransform/venv
