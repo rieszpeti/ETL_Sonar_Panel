@@ -1,3 +1,4 @@
+@@ -0,0 +1,87 @@
 import os
 from fastapi import FastAPI, UploadFile, File, Form
 from fastapi.responses import HTMLResponse
@@ -7,7 +8,9 @@ app = FastAPI()
 UPLOAD_DIRECTORY = "uploads"
 os.makedirs(UPLOAD_DIRECTORY, exist_ok=True) 
 
-html = """
+@app.get("/", response_class=HTMLResponse)
+async def upload_form():
+    return """
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -73,12 +76,7 @@ html = """
     </html>
     """
 
-@app.get("/", response_class=HTMLResponse)
-async def upload_form():
-    return html
-
-
-@app.post("/upload", response_class=HTMLResponse)
+@app.post("/upload")
 async def upload_file(file: UploadFile = File(...)):
     file_location = os.path.join(UPLOAD_DIRECTORY, file.filename)
     
@@ -86,4 +84,4 @@ async def upload_file(file: UploadFile = File(...)):
         file_content = await file.read()
         file_object.write(file_content)
 
-    return html
+    return {"filename": file.filename}
