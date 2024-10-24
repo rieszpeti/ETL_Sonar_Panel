@@ -9,7 +9,7 @@ services:
       - path: ./docker/docker_envs/image_process_extractor.env
     volumes:
       - ./docker/logs/image_process_extractor:/app/logs
-      - ./src/image_processing_extract/resources/roof_satellite/pictures:/app/resources/roof_satellite/pictures
+      - satellite_images:/app/resources/roof_satellite/pictures
     depends_on:
       mongodb:
         condition: service_started
@@ -26,7 +26,7 @@ services:
     ports:
       - "8842:80"
     volumes:
-      - ./src/image_processing_extract/resources/roof_satellite/pictures:/app/uploads
+      - satellite_images:/app/uploads
 
   news_extractor:
     build:
@@ -85,7 +85,7 @@ services:
     environment:
       - MONGO_INITDB_DATABASE=satellite-image
     volumes:
-      - ./docker/mongo_data:/data/db
+      - mongo_data:/data/db
 
   localstack_container:
       image: localstack/localstack
@@ -98,7 +98,7 @@ services:
         - AWS_ACCESS_KEY_ID=test
         - AWS_SECRET_ACCESS_KEY=test
       volumes:
-        - ./docker/localstack_data:/var/lib/localstack
+        - localstack_data:/var/lib/localstack
       command: [ "localstack", "start" ]
 
   create_bucket:
@@ -124,7 +124,7 @@ services:
       - POSTGRES_USER=test
       - POSTGRES_PASSWORD=test
     volumes:
-      - ./docker/timescaledb_data:/var/lib/postgresql/data
+      - timescaledb_data:/var/lib/postgresql/data
       - ./docker/sql/create_tables.sql:/docker-entrypoint-initdb.d/initdb.sql
     restart: unless-stopped
     healthcheck:
@@ -137,3 +137,4 @@ volumes:
   mongo_data:
   localstack_data:
   timescaledb_data:
+  satellite_images:
