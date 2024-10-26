@@ -10,9 +10,7 @@ load_dotenv()
 logger = logging.getLogger("news")
 
 
-
 def connect_to_postgres():
-    """Connects to PostgreSQL and returns the connection and cursor."""
     logging.info("Connecting to PostgreSQL...")
     pg_conn = psycopg2.connect(
         dbname=os.getenv("PG_DBNAME"),
