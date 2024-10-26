@@ -98,21 +98,23 @@ services:
         - SERVICES=s3
         - AWS_ACCESS_KEY_ID=test
         - AWS_SECRET_ACCESS_KEY=test
-      volumes:
-        - localstack_data:/var/lib/localstack
       command: [ "localstack", "start" ]
 
   create_bucket:
-    image: amazon/aws-cli
-    container_name: create_bucket
-    depends_on:
-      - localstack_container
-    entrypoint: ["sh", "-c"]
-    command: |
-      "sleep 8 && aws --endpoint-url=http://host.docker.internal:4566 s3api create-bucket --bucket satellite-image --region us-east-1"
-    environment:
-      - AWS_ACCESS_KEY_ID=test
-      - AWS_SECRET_ACCESS_KEY=test
+     image: amazon/aws-cli
+     container_name: create_bucket
+     depends_on:
+       - localstack_container
+     entrypoint: ["sh", "-c"]
+     command: |
+       "sleep 8 && \
+        aws --endpoint-url=http://host.docker.internal:4566 s3api create-bucket --bucket satellite-image --region us-east-1 && \
+        aws --endpoint-url=http://host.docker.internal:4566 s3 cp /var/lib/localstack s3://satellite-image/ --recursive"
+     environment:
+       - AWS_ACCESS_KEY_ID=test
+       - AWS_SECRET_ACCESS_KEY=test
+     volumes:
+       - ./Staging/src/image_processing_extract/resources/roof_satellite/pictures:/var/lib/localstack
 
   timescaledb:
     image: timescale/timescaledb:latest-pg16
@@ -136,6 +138,5 @@ services:
 
 volumes:
   mongo_data:
-  localstack_data:
   timescaledb_data:
   satellite_images:
