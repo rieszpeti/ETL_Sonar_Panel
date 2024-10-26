@@ -9,6 +9,7 @@ from logging_config import setup_logging
 load_dotenv()
 logger = logging.getLogger("news")
 
+
 def connect_to_mongodb():
     """Connects to MongoDB and returns the collection."""
     mongo_uri = os.getenv("MONGO_URI")
