@@ -41,3 +41,39 @@ docker compose up --build --force-recreate --no-deps -d stock_market_extractor
 'postgresql+psycopg2://yourUserDBName:yourUserDBPassword@yourDBDockerContainerName/yourDBName'
 
 
+CREATE TABLE IF NOT EXISTS fact_solar_installation (
+    id SERIAL PRIMARY KEY,
+    date_id INTEGER REFERENCES dim_date(date_id),
+    symbol_id INTEGER REFERENCES dim_symbol(symbol_id),
+    price FLOAT,                     -- Price of the solar installation
+    sentiment_score FLOAT,           -- Sentiment score from analysis
+    image_id INTEGER REFERENCES dim_image(image_id) -- Image associated with the installation
+);
+CREATE TABLE IF NOT EXISTS dim_date (
+    date_id SERIAL PRIMARY KEY,
+    date DATE UNIQUE NOT NULL,       -- The actual date
+    year INT,                        -- Year of the date
+    month INT,                       -- Month of the date
+    day INT                          -- Day of the date
+);
+CREATE TABLE IF NOT EXISTS dim_symbol (
+    symbol_id SERIAL PRIMARY KEY,
+    symbol TEXT UNIQUE NOT NULL,      -- Stock symbol for the solar company
+    company_name TEXT                 -- Name of the company associated with the symbol
+);
+CREATE TABLE IF NOT EXISTS dim_image (
+    image_id SERIAL PRIMARY KEY,
+    filename TEXT UNIQUE NOT NULL,    -- File name of the image
+    width INT,                        -- Width of the image
+    height INT,                       -- Height of the image
+    prediction_type TEXT              -- Type of prediction related to the image
+);
+
+CREATE TABLE IF NOT EXISTS dim_sentiment (
+    sentiment_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,  
+    sentiment_uuid UUID UNIQUE,                               
+    sentiment_label TEXT,                                         -- Sentiment label (e.g., positive, negative)
+    sentiment_score FLOAT                                         -- Sentiment score
+);
+
+CREATE INDEX IF NOT EXISTS idx_sentiment_id ON dim_sentiment(sentiment_id);

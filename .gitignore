@@ -1,7 +1,5 @@
-﻿Extract/.env
-.idea
-Extract/src/__pycache__
+﻿.idea
 *.env
-Extract/docker
-ExtractAndTransform/docker
-ExtractAndTransform/venv
+Load/venv
+venv
+Staging/docker

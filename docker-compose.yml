@@ -1,14 +1,14 @@
 services:
   # image_process_extractor:
   #   build:
-  #     context: ./ExtractAndTransform/src/image_processing_extract/
+  #     context: ./Staging/src/image_processing_extract/
   #     dockerfile: Dockerfile
   #   container_name: image_process_extractor
   #   env_file:
-  #     - path: ExtractAndTransform/src/image_processing_extract/.env
-  #     - path: ./ExtractAndTransform/docker/docker_envs/image_process_extractor.env
+  #     - path: Staging/src/image_processing_extract/.env
+  #     - path: ./Staging/docker/docker_envs/image_process_extractor.env
   #   volumes:
-  #     - ./ExtractAndTransform/docker/logs/image_process_extractor:/app/logs
+  #     - ./Staging/docker/logs/image_process_extractor:/app/logs
   #     - satellite_images:/app/resources/roof_satellite/pictures
   #   depends_on:
   #     mongodb:
@@ -20,7 +20,7 @@ services:
 
   upload_images_webpage:
     build:
-      context: ./ExtractAndTransform/src/upload_images/
+      context: ./Staging/src/upload_images/
       dockerfile: Dockerfile
     container_name: upload_images_webpage
     ports:
@@ -30,33 +30,33 @@ services:
 
   # news_extractor:
   #   build:
-  #     context: ./ExtractAndTransform/src/news_extract/
+  #     context: ./Staging/src/news_extract/
   #     dockerfile: Dockerfile
   #   container_name: news_extractor
   #   env_file:
-  #     - path: ExtractAndTransform/src/news_extract/.env
-  #     - path: ./ExtractAndTransform/docker/docker_envs/news_extractor.env
+  #     - path: Staging/src/news_extract/.env
+  #     - path: ./Staging/docker/docker_envs/news_extractor.env
   #   volumes:
-  #     - ./ExtractAndTransform/docker/logs/news_extractor:/app/logs
+  #     - ./Staging/docker/logs/news_extractor:/app/logs
   #   depends_on:
   #     - timescaledb
   #     - mongodb
 
-  # stock_market_extractor:
-  #   build:
-  #     context: ./ExtractAndTransform/src/stock_market_extract/
-  #     dockerfile: Dockerfile
-  #   container_name: stock_market_extractor
-  #   env_file:
-  #     - path: ExtractAndTransform/src/stock_market_extract/.env
-  #     - path: ./ExtractAndTransform/docker/docker_envs/stock_market_extractor.env
-  #   environment:
-  #     - TZ=America/New_York
-  #   volumes:
-  #     - ./ExtractAndTransform/docker/logs/stock_market_extractor:/app/logs
-  #   depends_on:
-  #     timescaledb:
-  #       condition: service_healthy
+#  stock_market_extractor:
+#    build:
+#      context: ./Staging/src/stock_market_extract/
+#      dockerfile: Dockerfile
+#    container_name: stock_market_extractor
+#    env_file:
+#      - path: Staging/src/stock_market_extract/.env
+#      - path: ./Staging/docker/docker_envs/stock_market_extractor.env
+#    environment:
+#      - TZ=America/New_York
+#    volumes:
+#      - ./Staging/docker/logs/stock_market_extractor:/app/logs
+#    depends_on:
+#      timescaledb:
+#        condition: service_healthy
 
   # restart the image_process_extractor and 
   # news_extractor and stock_market_extractor
@@ -109,12 +109,14 @@ services:
      command: |
        "sleep 8 && \
         aws --endpoint-url=http://host.docker.internal:4566 s3api create-bucket --bucket satellite-image --region us-east-1 && \
-        aws --endpoint-url=http://host.docker.internal:4566 s3 cp /var/lib/localstack s3://satellite-image/ --recursive"
+        aws --endpoint-url=http://host.docker.internal:4566 s3 cp /var/lib/localstack s3://satellite-image/ --recursive && \
+        cp -r /var/lib/localstack/* /bucket_data"
      environment:
        - AWS_ACCESS_KEY_ID=test
        - AWS_SECRET_ACCESS_KEY=test
      volumes:
        - ./Staging/src/image_processing_extract/resources/roof_satellite/pictures:/var/lib/localstack
+       - satellite_images:/bucket_data
 
   timescaledb:
     image: timescale/timescaledb:latest-pg16
@@ -128,15 +130,40 @@ services:
       - POSTGRES_PASSWORD=test
     volumes:
       - timescaledb_data:/var/lib/postgresql/data
-      - ./ExtractAndTransform/docker/sql/create_tables.sql:/docker-entrypoint-initdb.d/initdb.sql
+      - ./Staging/docker/sql/create_tables.sql:/docker-entrypoint-initdb.d/initdb.sql
     restart: unless-stopped
     healthcheck:
-      test: [ "CMD-SHELL", "pg_isready -d postgres" ]
+      test: [ "CMD-SHELL", "pg_isready -d postgres" ] 
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  postgres_star:
+    image: postgres:latest 
+    container_name: postgres_star
+    ports:
+      - "5433:5432" 
+    environment:
+      - POSTGRES_DB=star
+      - PGUSER=test
+      - POSTGRES_USER=test          
+      - POSTGRES_PASSWORD=test        
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./Load/docker/sql/create_tables.sql:/docker-entrypoint-initdb.d/initdb.sql
+    restart: unless-stopped
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d star" ] 
       interval: 30s
       timeout: 10s
       retries: 5
 
 volumes:
   mongo_data:
+    external: true
   timescaledb_data:
+    external: true
   satellite_images:
+    external: true
+  postgres_data: 
+    external: true

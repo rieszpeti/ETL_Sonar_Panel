@@ -1,0 +1,1001 @@
+2024-10-26 13:27:14,130 - INFO - Connecting to MongoDB...
+2024-10-26 13:27:26,486 - INFO - Successfully connected to MongoDB.
+2024-10-26 13:27:35,364 - INFO - Connecting to PostgreSQL...
+2024-10-26 13:27:35,399 - INFO - Successfully connected to PostgreSQL.
+2024-10-26 13:27:58,852 - INFO - PostgreSQL cursor closed.
+2024-10-26 13:27:58,854 - INFO - PostgreSQL connection closed.
+2024-10-26 13:27:58,855 - INFO - Migration process finished.
+2024-10-26 13:38:59,324 - INFO - Connecting to MongoDB...
+2024-10-26 13:38:59,332 - INFO - Successfully connected to MongoDB.
+2024-10-26 13:38:59,332 - INFO - Connecting to PostgreSQL...
+2024-10-26 13:38:59,368 - INFO - Successfully connected to PostgreSQL.
+2024-10-26 13:38:59,368 - INFO - Loading sentiment data from MongoDB...
+2024-10-26 13:38:59,382 - ERROR - An error occurred during migration: can't adapt type 'ObjectId'
+2024-10-26 13:38:59,382 - INFO - PostgreSQL cursor closed.
+2024-10-26 13:38:59,383 - INFO - PostgreSQL connection closed.
+2024-10-26 13:38:59,383 - INFO - Migration process finished.
+2024-10-26 13:40:49,645 - INFO - Connecting to MongoDB...
+2024-10-26 13:40:49,651 - INFO - Successfully connected to MongoDB.
+2024-10-26 13:40:49,651 - INFO - Connecting to PostgreSQL...
+2024-10-26 13:40:49,684 - INFO - Successfully connected to PostgreSQL.
+2024-10-26 13:40:49,684 - INFO - Loading sentiment data from MongoDB...
+2024-10-26 13:40:49,705 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,706 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,707 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,708 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,709 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,711 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,712 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,713 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,714 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,715 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,715 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,717 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,719 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,720 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,720 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,721 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,722 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,723 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,725 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,726 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,727 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,728 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,730 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,731 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,732 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,734 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,735 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,735 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,736 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,738 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,739 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,740 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,741 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,742 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,743 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,745 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,746 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,747 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,748 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,749 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,750 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,751 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,752 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,753 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,754 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,756 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,757 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,758 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,759 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,760 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,761 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,763 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,764 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,764 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,765 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,767 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,768 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,769 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,771 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,772 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,773 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,774 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,775 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,776 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,777 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,778 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,779 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,780 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,780 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,782 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,782 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,783 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,784 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,785 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,786 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,787 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,788 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,789 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,790 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,792 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,793 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,794 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,794 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,795 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,796 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,797 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,798 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,799 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,800 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,801 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,801 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,803 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,803 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,804 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,806 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,806 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,808 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,809 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,810 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,811 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,813 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,828 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,829 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,830 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,831 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,832 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,833 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,834 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,834 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,835 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,836 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,837 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,838 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,839 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,840 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,841 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,842 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,843 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,843 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,846 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,847 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,848 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,849 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,849 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,851 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,852 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,853 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,855 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,856 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,857 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,858 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,859 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,861 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,862 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,863 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,864 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,866 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,868 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,869 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,871 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,872 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,873 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,875 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,877 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,878 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,880 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,881 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,883 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,885 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,886 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,888 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,889 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,890 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,891 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,892 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,893 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,894 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,895 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,896 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,897 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,899 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,900 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,902 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,903 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,904 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,906 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,907 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,908 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,909 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,910 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,911 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,912 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,913 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,914 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,916 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,917 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,918 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,920 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,921 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,922 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,923 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,924 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,925 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,927 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,928 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,929 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,930 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,931 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,933 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,935 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,936 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,938 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,939 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,940 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,940 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,942 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,944 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,945 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,946 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,948 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,949 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,951 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,952 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,953 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,954 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,956 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,957 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,958 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,959 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,959 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,961 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,961 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,963 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,964 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,965 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,966 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,967 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,968 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,969 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,970 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,971 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,972 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,973 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,974 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,975 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,977 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,978 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,979 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,980 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,981 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,982 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,983 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,984 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,985 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,986 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,987 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,987 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,988 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,989 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,990 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,991 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,992 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,993 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,994 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,995 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,997 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,998 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:49,999 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,000 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,001 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,002 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,003 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,003 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,004 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,005 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,006 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,007 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,008 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,009 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,011 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,012 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,013 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,014 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,015 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,016 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,018 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,019 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,020 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,020 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,021 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,022 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,023 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,024 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,025 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,027 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,027 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,029 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,029 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,031 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,032 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,033 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,034 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,035 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,036 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,037 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,037 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,039 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,041 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,042 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,043 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,044 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,045 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,046 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,047 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,048 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,050 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,050 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,052 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,053 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,054 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,056 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,057 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,058 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,061 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,062 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,063 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,065 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,067 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,069 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,070 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,071 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,072 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,074 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,076 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,077 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,078 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,079 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,081 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,082 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,084 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,085 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,088 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,089 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,091 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,092 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,094 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,095 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,097 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,098 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,099 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,102 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,103 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,104 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,107 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,108 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,110 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,112 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,113 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,114 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,116 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,117 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,119 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,120 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,122 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,124 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,125 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,126 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,127 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,130 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,132 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,133 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,134 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,136 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,138 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,139 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,142 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,143 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,144 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,146 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,148 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,150 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,152 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,153 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,155 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,156 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,158 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,160 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,161 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,163 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,164 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,166 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,168 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,170 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,171 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,172 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,173 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,174 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,176 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,177 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,179 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,181 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,181 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,184 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,185 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,186 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,188 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,189 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,191 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,192 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,193 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,194 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,195 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,196 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,199 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,200 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,201 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,202 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,203 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,204 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,206 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,207 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,208 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,209 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,210 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,212 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,213 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,214 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,216 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,217 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,218 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,221 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,222 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,224 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,225 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,227 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,228 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,229 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,230 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,232 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,233 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,234 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,235 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,237 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,238 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,239 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,240 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,241 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,243 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,244 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,245 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,246 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,247 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,248 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,250 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,251 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,252 - INFO - Inserted sentiment data for UUID: None
+2024-10-26 13:40:50,252 - INFO - Data loading complete.
+2024-10-26 13:40:50,262 - INFO - Transaction committed successfully.
+2024-10-26 13:40:50,262 - INFO - PostgreSQL cursor closed.
+2024-10-26 13:40:50,262 - INFO - PostgreSQL connection closed.
+2024-10-26 13:40:50,262 - INFO - Migration process finished.
+2024-10-26 13:42:42,399 - INFO - Connecting to MongoDB...
+2024-10-26 13:42:42,403 - INFO - Successfully connected to MongoDB.
+2024-10-26 13:42:42,404 - INFO - Connecting to PostgreSQL...
+2024-10-26 13:42:42,436 - INFO - Successfully connected to PostgreSQL.
+2024-10-26 13:42:42,436 - INFO - Loading sentiment data from MongoDB...
+2024-10-26 13:42:42,463 - ERROR - An error occurred during migration: 'ObjectId' object has no attribute 'get'
+2024-10-26 13:42:42,464 - INFO - PostgreSQL cursor closed.
+2024-10-26 13:42:42,464 - INFO - PostgreSQL connection closed.
+2024-10-26 13:42:42,465 - INFO - Migration process finished.
+2024-10-26 13:44:05,642 - INFO - Connecting to MongoDB...
+2024-10-26 13:44:05,648 - INFO - Successfully connected to MongoDB.
+2024-10-26 13:44:05,649 - INFO - Connecting to PostgreSQL...
+2024-10-26 13:44:05,687 - INFO - Successfully connected to PostgreSQL.
+2024-10-26 13:44:05,687 - INFO - Loading sentiment data from MongoDB...
+2024-10-26 13:44:05,714 - ERROR - An error occurred during migration: invalid input syntax for type uuid: "671a5b00fac80c4f87f15ff7"
+LINE 3:         VALUES ('671a5b00fac80c4f87f15ff7', 'Best Solar Pane...
+                        ^
+
+2024-10-26 13:44:05,714 - INFO - PostgreSQL cursor closed.
+2024-10-26 13:44:05,715 - INFO - PostgreSQL connection closed.
+2024-10-26 13:44:05,716 - INFO - Migration process finished.
+2024-10-26 13:46:22,543 - INFO - Connecting to MongoDB...
+2024-10-26 13:46:22,547 - INFO - Successfully connected to MongoDB.
+2024-10-26 13:46:22,547 - INFO - Connecting to PostgreSQL...
+2024-10-26 13:46:22,577 - INFO - Successfully connected to PostgreSQL.
+2024-10-26 13:46:22,577 - INFO - Loading sentiment data from MongoDB...
+2024-10-26 13:46:22,592 - ERROR - An error occurred during migration: invalid input syntax for type oid: "671a5b00fac80c4f87f15ff7"
+LINE 3:         VALUES ('671a5b00fac80c4f87f15ff7', 'Best Solar Pane...
+                        ^
+
+2024-10-26 13:46:22,592 - INFO - PostgreSQL cursor closed.
+2024-10-26 13:46:22,593 - INFO - PostgreSQL connection closed.
+2024-10-26 13:46:22,593 - INFO - Migration process finished.
+2024-10-26 13:49:06,865 - INFO - Connecting to MongoDB...
+2024-10-26 13:49:06,871 - INFO - Successfully connected to MongoDB.
+2024-10-26 13:49:06,871 - INFO - Connecting to PostgreSQL...
+2024-10-26 13:49:06,905 - INFO - Successfully connected to PostgreSQL.
+2024-10-26 13:49:06,906 - INFO - Loading sentiment data from MongoDB...
+2024-10-26 13:49:06,938 - ERROR - An error occurred during migration: can't adapt type 'ObjectId'
+2024-10-26 13:49:06,938 - INFO - PostgreSQL cursor closed.
+2024-10-26 13:49:06,939 - INFO - PostgreSQL connection closed.
+2024-10-26 13:49:06,939 - INFO - Migration process finished.
+2024-10-26 13:49:48,551 - INFO - Connecting to MongoDB...
+2024-10-26 13:49:48,562 - INFO - Successfully connected to MongoDB.
+2024-10-26 13:49:48,562 - INFO - Connecting to PostgreSQL...
+2024-10-26 13:49:48,579 - INFO - Successfully connected to PostgreSQL.
+2024-10-26 13:49:48,579 - INFO - Loading sentiment data from MongoDB...
+2024-10-26 13:50:05,120 - INFO - PostgreSQL cursor closed.
+2024-10-26 13:50:05,121 - INFO - PostgreSQL connection closed.
+2024-10-26 13:50:05,121 - INFO - Migration process finished.
+2024-10-26 13:50:16,882 - INFO - Connecting to MongoDB...
+2024-10-26 13:50:16,898 - INFO - Successfully connected to MongoDB.
+2024-10-26 13:50:16,898 - INFO - Connecting to PostgreSQL...
+2024-10-26 13:50:16,925 - INFO - Successfully connected to PostgreSQL.
+2024-10-26 13:50:16,927 - INFO - Loading sentiment data from MongoDB...
+2024-10-26 13:50:16,946 - ERROR - An error occurred during migration: 'ObjectId' object has no attribute 'get'
+2024-10-26 13:50:16,947 - INFO - PostgreSQL cursor closed.
+2024-10-26 13:50:16,948 - INFO - PostgreSQL connection closed.
+2024-10-26 13:50:16,948 - INFO - Migration process finished.
+2024-10-26 13:50:34,620 - INFO - Connecting to MongoDB...
+2024-10-26 13:50:34,637 - INFO - Successfully connected to MongoDB.
+2024-10-26 13:50:34,638 - INFO - Connecting to PostgreSQL...
+2024-10-26 13:50:34,669 - INFO - Successfully connected to PostgreSQL.
+2024-10-26 13:50:34,670 - INFO - Loading sentiment data from MongoDB...
+2024-10-26 13:50:37,418 - INFO - PostgreSQL cursor closed.
+2024-10-26 13:50:37,419 - INFO - PostgreSQL connection closed.
+2024-10-26 13:50:37,419 - INFO - Migration process finished.
+2024-10-26 13:50:43,792 - INFO - Connecting to MongoDB...
+2024-10-26 13:50:43,808 - INFO - Successfully connected to MongoDB.
+2024-10-26 13:50:43,809 - INFO - Connecting to PostgreSQL...
+2024-10-26 13:50:43,846 - INFO - Successfully connected to PostgreSQL.
+2024-10-26 13:50:43,847 - INFO - Loading sentiment data from MongoDB...
+2024-10-26 13:52:05,648 - INFO - PostgreSQL cursor closed.
+2024-10-26 13:52:05,648 - INFO - PostgreSQL connection closed.
+2024-10-26 13:52:05,648 - INFO - Migration process finished.
+2024-10-26 13:52:21,752 - INFO - Connecting to MongoDB...
+2024-10-26 13:52:21,755 - INFO - Successfully connected to MongoDB.
+2024-10-26 13:52:21,756 - INFO - Connecting to PostgreSQL...
+2024-10-26 13:52:21,788 - INFO - Successfully connected to PostgreSQL.
+2024-10-26 13:52:21,788 - INFO - Loading sentiment data from MongoDB...
+2024-10-26 13:52:21,812 - ERROR - An error occurred during migration: can't adapt type 'ObjectId'
+2024-10-26 13:52:21,813 - INFO - PostgreSQL cursor closed.
+2024-10-26 13:52:21,813 - INFO - PostgreSQL connection closed.
+2024-10-26 13:52:21,813 - INFO - Migration process finished.
+2024-10-26 13:57:16,349 - INFO - Connecting to MongoDB...
+2024-10-26 13:57:16,354 - INFO - Successfully connected to MongoDB.
+2024-10-26 13:57:16,354 - INFO - Connecting to PostgreSQL...
+2024-10-26 13:57:16,387 - INFO - Successfully connected to PostgreSQL.
+2024-10-26 13:57:16,387 - INFO - Loading sentiment data from MongoDB...
+2024-10-26 13:57:16,424 - ERROR - An error occurred during migration: can't adapt type 'ObjectId'
+2024-10-26 13:57:16,424 - INFO - PostgreSQL cursor closed.
+2024-10-26 13:57:16,425 - INFO - PostgreSQL connection closed.
+2024-10-26 13:57:16,425 - INFO - Migration process finished.
+2024-10-26 13:57:29,787 - INFO - Connecting to MongoDB...
+2024-10-26 13:57:29,791 - INFO - Successfully connected to MongoDB.
+2024-10-26 13:57:29,791 - INFO - Connecting to PostgreSQL...
+2024-10-26 13:57:29,823 - INFO - Successfully connected to PostgreSQL.
+2024-10-26 13:57:29,823 - INFO - Loading sentiment data from MongoDB...
+2024-10-26 13:57:29,851 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f15ff7
+2024-10-26 13:57:29,853 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f15ff8
+2024-10-26 13:57:29,854 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f15ff9
+2024-10-26 13:57:29,856 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f15ffa
+2024-10-26 13:57:29,857 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f15ffb
+2024-10-26 13:57:29,858 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f15ffc
+2024-10-26 13:57:29,860 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f15ffd
+2024-10-26 13:57:29,861 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f15ffe
+2024-10-26 13:57:29,862 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f15fff
+2024-10-26 13:57:29,863 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16000
+2024-10-26 13:57:29,865 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16001
+2024-10-26 13:57:29,866 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16002
+2024-10-26 13:57:29,867 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16003
+2024-10-26 13:57:29,869 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16004
+2024-10-26 13:57:29,870 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16005
+2024-10-26 13:57:29,871 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16006
+2024-10-26 13:57:29,872 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16007
+2024-10-26 13:57:29,873 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16008
+2024-10-26 13:57:29,874 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16009
+2024-10-26 13:57:29,875 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1600a
+2024-10-26 13:57:29,877 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1600b
+2024-10-26 13:57:29,878 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1600c
+2024-10-26 13:57:29,879 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1600d
+2024-10-26 13:57:29,880 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1600e
+2024-10-26 13:57:29,880 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1600f
+2024-10-26 13:57:29,882 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16010
+2024-10-26 13:57:29,883 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16011
+2024-10-26 13:57:29,883 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16012
+2024-10-26 13:57:29,884 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16013
+2024-10-26 13:57:29,885 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16014
+2024-10-26 13:57:29,887 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16015
+2024-10-26 13:57:29,888 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16016
+2024-10-26 13:57:29,889 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16017
+2024-10-26 13:57:29,890 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16018
+2024-10-26 13:57:29,891 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16019
+2024-10-26 13:57:29,892 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1601a
+2024-10-26 13:57:29,893 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1601b
+2024-10-26 13:57:29,894 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1601c
+2024-10-26 13:57:29,895 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1601d
+2024-10-26 13:57:29,896 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1601e
+2024-10-26 13:57:29,898 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1601f
+2024-10-26 13:57:29,899 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16020
+2024-10-26 13:57:29,901 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16021
+2024-10-26 13:57:29,902 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16022
+2024-10-26 13:57:29,902 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16023
+2024-10-26 13:57:29,903 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16024
+2024-10-26 13:57:29,904 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16025
+2024-10-26 13:57:29,905 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16026
+2024-10-26 13:57:29,906 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16027
+2024-10-26 13:57:29,907 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16028
+2024-10-26 13:57:29,908 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16029
+2024-10-26 13:57:29,909 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1602a
+2024-10-26 13:57:29,910 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1602b
+2024-10-26 13:57:29,911 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1602c
+2024-10-26 13:57:29,912 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1602d
+2024-10-26 13:57:29,913 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1602e
+2024-10-26 13:57:29,914 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1602f
+2024-10-26 13:57:29,916 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16030
+2024-10-26 13:57:29,917 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16031
+2024-10-26 13:57:29,918 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16032
+2024-10-26 13:57:29,920 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16033
+2024-10-26 13:57:29,921 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16034
+2024-10-26 13:57:29,922 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16035
+2024-10-26 13:57:29,923 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16036
+2024-10-26 13:57:29,924 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16037
+2024-10-26 13:57:29,926 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16038
+2024-10-26 13:57:29,927 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16039
+2024-10-26 13:57:29,928 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1603a
+2024-10-26 13:57:29,929 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1603b
+2024-10-26 13:57:29,930 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1603c
+2024-10-26 13:57:29,932 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1603d
+2024-10-26 13:57:29,933 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1603e
+2024-10-26 13:57:29,934 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1603f
+2024-10-26 13:57:29,935 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16040
+2024-10-26 13:57:29,936 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16041
+2024-10-26 13:57:29,937 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16042
+2024-10-26 13:57:29,938 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16043
+2024-10-26 13:57:29,940 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16044
+2024-10-26 13:57:29,941 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16045
+2024-10-26 13:57:29,942 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16046
+2024-10-26 13:57:29,943 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16047
+2024-10-26 13:57:29,944 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16048
+2024-10-26 13:57:29,945 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16049
+2024-10-26 13:57:29,946 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1604a
+2024-10-26 13:57:29,948 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1604b
+2024-10-26 13:57:29,949 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1604c
+2024-10-26 13:57:29,950 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1604d
+2024-10-26 13:57:29,951 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1604e
+2024-10-26 13:57:29,952 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f1604f
+2024-10-26 13:57:29,954 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16050
+2024-10-26 13:57:29,955 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16051
+2024-10-26 13:57:29,956 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16052
+2024-10-26 13:57:29,957 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16053
+2024-10-26 13:57:29,958 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16054
+2024-10-26 13:57:29,960 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16055
+2024-10-26 13:57:29,961 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16056
+2024-10-26 13:57:29,962 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16057
+2024-10-26 13:57:29,963 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16058
+2024-10-26 13:57:29,964 - INFO - Inserted sentiment data for UUID: 671a5b00fac80c4f87f16059
+2024-10-26 13:57:29,965 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1605b
+2024-10-26 13:57:29,966 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1605c
+2024-10-26 13:57:29,985 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1605d
+2024-10-26 13:57:29,986 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1605e
+2024-10-26 13:57:29,987 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1605f
+2024-10-26 13:57:29,989 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16060
+2024-10-26 13:57:29,990 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16061
+2024-10-26 13:57:29,992 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16062
+2024-10-26 13:57:29,993 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16063
+2024-10-26 13:57:29,994 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16064
+2024-10-26 13:57:29,995 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16065
+2024-10-26 13:57:29,996 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16066
+2024-10-26 13:57:29,998 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16067
+2024-10-26 13:57:29,999 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16068
+2024-10-26 13:57:30,001 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16069
+2024-10-26 13:57:30,003 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1606a
+2024-10-26 13:57:30,004 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1606b
+2024-10-26 13:57:30,005 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1606c
+2024-10-26 13:57:30,007 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1606d
+2024-10-26 13:57:30,008 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1606e
+2024-10-26 13:57:30,009 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1606f
+2024-10-26 13:57:30,011 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16070
+2024-10-26 13:57:30,012 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16071
+2024-10-26 13:57:30,015 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16072
+2024-10-26 13:57:30,016 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16073
+2024-10-26 13:57:30,017 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16074
+2024-10-26 13:57:30,019 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16075
+2024-10-26 13:57:30,020 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16076
+2024-10-26 13:57:30,022 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16077
+2024-10-26 13:57:30,023 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16078
+2024-10-26 13:57:30,024 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16079
+2024-10-26 13:57:30,025 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1607a
+2024-10-26 13:57:30,026 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1607b
+2024-10-26 13:57:30,029 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1607c
+2024-10-26 13:57:30,030 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1607d
+2024-10-26 13:57:30,031 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1607e
+2024-10-26 13:57:30,032 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1607f
+2024-10-26 13:57:30,034 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16080
+2024-10-26 13:57:30,035 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16081
+2024-10-26 13:57:30,037 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16082
+2024-10-26 13:57:30,038 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16083
+2024-10-26 13:57:30,039 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16084
+2024-10-26 13:57:30,040 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16085
+2024-10-26 13:57:30,041 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16086
+2024-10-26 13:57:30,043 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16087
+2024-10-26 13:57:30,045 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16088
+2024-10-26 13:57:30,047 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16089
+2024-10-26 13:57:30,049 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1608a
+2024-10-26 13:57:30,050 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1608b
+2024-10-26 13:57:30,051 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1608c
+2024-10-26 13:57:30,053 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1608d
+2024-10-26 13:57:30,055 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1608e
+2024-10-26 13:57:30,056 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1608f
+2024-10-26 13:57:30,057 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16090
+2024-10-26 13:57:30,058 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16091
+2024-10-26 13:57:30,060 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16092
+2024-10-26 13:57:30,062 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16093
+2024-10-26 13:57:30,063 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16094
+2024-10-26 13:57:30,064 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16095
+2024-10-26 13:57:30,066 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16096
+2024-10-26 13:57:30,067 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16097
+2024-10-26 13:57:30,069 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16098
+2024-10-26 13:57:30,070 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f16099
+2024-10-26 13:57:30,071 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1609a
+2024-10-26 13:57:30,073 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1609b
+2024-10-26 13:57:30,074 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1609c
+2024-10-26 13:57:30,075 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1609d
+2024-10-26 13:57:30,077 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1609e
+2024-10-26 13:57:30,078 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f1609f
+2024-10-26 13:57:30,080 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f160a0
+2024-10-26 13:57:30,081 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f160a1
+2024-10-26 13:57:30,083 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f160a2
+2024-10-26 13:57:30,085 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f160a3
+2024-10-26 13:57:30,086 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f160a4
+2024-10-26 13:57:30,087 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f160a5
+2024-10-26 13:57:30,089 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f160a6
+2024-10-26 13:57:30,090 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f160a7
+2024-10-26 13:57:30,091 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f160a8
+2024-10-26 13:57:30,093 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f160a9
+2024-10-26 13:57:30,094 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f160aa
+2024-10-26 13:57:30,096 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f160ab
+2024-10-26 13:57:30,098 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f160ac
+2024-10-26 13:57:30,099 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f160ad
+2024-10-26 13:57:30,100 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f160ae
+2024-10-26 13:57:30,101 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f160af
+2024-10-26 13:57:30,102 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f160b0
+2024-10-26 13:57:30,105 - INFO - Inserted sentiment data for UUID: 671a5b55fac80c4f87f160b1
+2024-10-26 13:57:30,106 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160b3
+2024-10-26 13:57:30,107 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160b4
+2024-10-26 13:57:30,108 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160b5
+2024-10-26 13:57:30,110 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160b6
+2024-10-26 13:57:30,112 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160b7
+2024-10-26 13:57:30,113 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160b8
+2024-10-26 13:57:30,114 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160b9
+2024-10-26 13:57:30,116 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160ba
+2024-10-26 13:57:30,117 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160bb
+2024-10-26 13:57:30,118 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160bc
+2024-10-26 13:57:30,120 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160bd
+2024-10-26 13:57:30,121 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160be
+2024-10-26 13:57:30,122 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160bf
+2024-10-26 13:57:30,123 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160c0
+2024-10-26 13:57:30,124 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160c1
+2024-10-26 13:57:30,126 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160c2
+2024-10-26 13:57:30,127 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160c3
+2024-10-26 13:57:30,128 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160c4
+2024-10-26 13:57:30,129 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160c5
+2024-10-26 13:57:30,131 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160c6
+2024-10-26 13:57:30,132 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160c7
+2024-10-26 13:57:30,133 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160c8
+2024-10-26 13:57:30,135 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160c9
+2024-10-26 13:57:30,136 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160ca
+2024-10-26 13:57:30,137 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160cb
+2024-10-26 13:57:30,138 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160cc
+2024-10-26 13:57:30,139 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160cd
+2024-10-26 13:57:30,140 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160ce
+2024-10-26 13:57:30,141 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160cf
+2024-10-26 13:57:30,142 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160d0
+2024-10-26 13:57:30,144 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160d1
+2024-10-26 13:57:30,145 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160d2
+2024-10-26 13:57:30,146 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160d3
+2024-10-26 13:57:30,147 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160d4
+2024-10-26 13:57:30,148 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160d5
+2024-10-26 13:57:30,150 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160d6
+2024-10-26 13:57:30,151 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160d7
+2024-10-26 13:57:30,152 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160d8
+2024-10-26 13:57:30,153 - INFO - Inserted sentiment data for UUID: 671a5b7afac80c4f87f160d9
+2024-10-26 13:57:30,153 - INFO - Inserted sentiment data for UUID: 671a5b7bfac80c4f87f160da
+2024-10-26 13:57:30,155 - INFO - Inserted sentiment data for UUID: 671a5b7bfac80c4f87f160db
+2024-10-26 13:57:30,157 - INFO - Inserted sentiment data for UUID: 671a5b7bfac80c4f87f160dc
+2024-10-26 13:57:30,158 - INFO - Inserted sentiment data for UUID: 671a5b7bfac80c4f87f160dd
+2024-10-26 13:57:30,159 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160df
+2024-10-26 13:57:30,160 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160e0
+2024-10-26 13:57:30,161 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160e1
+2024-10-26 13:57:30,162 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160e2
+2024-10-26 13:57:30,164 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160e3
+2024-10-26 13:57:30,164 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160e4
+2024-10-26 13:57:30,166 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160e5
+2024-10-26 13:57:30,167 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160e6
+2024-10-26 13:57:30,168 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160e7
+2024-10-26 13:57:30,169 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160e8
+2024-10-26 13:57:30,170 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160e9
+2024-10-26 13:57:30,172 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160ea
+2024-10-26 13:57:30,174 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160eb
+2024-10-26 13:57:30,175 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160ec
+2024-10-26 13:57:30,176 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160ed
+2024-10-26 13:57:30,177 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160ee
+2024-10-26 13:57:30,178 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160ef
+2024-10-26 13:57:30,180 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160f0
+2024-10-26 13:57:30,181 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160f1
+2024-10-26 13:57:30,183 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160f2
+2024-10-26 13:57:30,184 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160f3
+2024-10-26 13:57:30,185 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160f4
+2024-10-26 13:57:30,186 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160f5
+2024-10-26 13:57:30,187 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160f6
+2024-10-26 13:57:30,188 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160f7
+2024-10-26 13:57:30,189 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160f8
+2024-10-26 13:57:30,190 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160f9
+2024-10-26 13:57:30,192 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160fa
+2024-10-26 13:57:30,193 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160fb
+2024-10-26 13:57:30,194 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160fc
+2024-10-26 13:57:30,196 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160fd
+2024-10-26 13:57:30,197 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160fe
+2024-10-26 13:57:30,199 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f160ff
+2024-10-26 13:57:30,200 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16100
+2024-10-26 13:57:30,202 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16101
+2024-10-26 13:57:30,203 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16102
+2024-10-26 13:57:30,204 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16103
+2024-10-26 13:57:30,206 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16104
+2024-10-26 13:57:30,207 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16105
+2024-10-26 13:57:30,209 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16106
+2024-10-26 13:57:30,210 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16107
+2024-10-26 13:57:30,211 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16108
+2024-10-26 13:57:30,213 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16109
+2024-10-26 13:57:30,214 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f1610a
+2024-10-26 13:57:30,216 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f1610b
+2024-10-26 13:57:30,218 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f1610c
+2024-10-26 13:57:30,219 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f1610d
+2024-10-26 13:57:30,220 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f1610e
+2024-10-26 13:57:30,221 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f1610f
+2024-10-26 13:57:30,223 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16110
+2024-10-26 13:57:30,224 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16111
+2024-10-26 13:57:30,225 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16112
+2024-10-26 13:57:30,226 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16113
+2024-10-26 13:57:30,228 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16114
+2024-10-26 13:57:30,229 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16115
+2024-10-26 13:57:30,231 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16116
+2024-10-26 13:57:30,232 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16117
+2024-10-26 13:57:30,233 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16118
+2024-10-26 13:57:30,234 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16119
+2024-10-26 13:57:30,235 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f1611a
+2024-10-26 13:57:30,238 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f1611b
+2024-10-26 13:57:30,239 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f1611c
+2024-10-26 13:57:30,241 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f1611d
+2024-10-26 13:57:30,242 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f1611e
+2024-10-26 13:57:30,243 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f1611f
+2024-10-26 13:57:30,245 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16120
+2024-10-26 13:57:30,247 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16121
+2024-10-26 13:57:30,248 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16122
+2024-10-26 13:57:30,250 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16123
+2024-10-26 13:57:30,251 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16124
+2024-10-26 13:57:30,252 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16125
+2024-10-26 13:57:30,254 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16126
+2024-10-26 13:57:30,255 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16127
+2024-10-26 13:57:30,256 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16128
+2024-10-26 13:57:30,258 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16129
+2024-10-26 13:57:30,259 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f1612a
+2024-10-26 13:57:30,261 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f1612b
+2024-10-26 13:57:30,263 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f1612c
+2024-10-26 13:57:30,264 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f1612d
+2024-10-26 13:57:30,266 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f1612e
+2024-10-26 13:57:30,267 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f1612f
+2024-10-26 13:57:30,269 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16130
+2024-10-26 13:57:30,270 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16131
+2024-10-26 13:57:30,272 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16132
+2024-10-26 13:57:30,273 - INFO - Inserted sentiment data for UUID: 671a5ba2fac80c4f87f16133
+2024-10-26 13:57:30,274 - INFO - Inserted sentiment data for UUID: 671a5bb2fac80c4f87f16135
+2024-10-26 13:57:30,275 - INFO - Inserted sentiment data for UUID: 671a5bb2fac80c4f87f16136
+2024-10-26 13:57:30,276 - INFO - Inserted sentiment data for UUID: 671a5bb2fac80c4f87f16137
+2024-10-26 13:57:30,278 - INFO - Inserted sentiment data for UUID: 671a5bb2fac80c4f87f16138
+2024-10-26 13:57:30,280 - INFO - Inserted sentiment data for UUID: 671a5bb2fac80c4f87f16139
+2024-10-26 13:57:30,281 - INFO - Inserted sentiment data for UUID: 671a5bb2fac80c4f87f1613a
+2024-10-26 13:57:30,283 - INFO - Inserted sentiment data for UUID: 671a5bb2fac80c4f87f1613b
+2024-10-26 13:57:30,285 - INFO - Inserted sentiment data for UUID: 671a5bb2fac80c4f87f1613c
+2024-10-26 13:57:30,287 - INFO - Inserted sentiment data for UUID: 671a5bb2fac80c4f87f1613d
+2024-10-26 13:57:30,287 - INFO - Inserted sentiment data for UUID: 671a5bb2fac80c4f87f1613e
+2024-10-26 13:57:30,290 - INFO - Inserted sentiment data for UUID: 671a5bb2fac80c4f87f1613f
+2024-10-26 13:57:30,291 - INFO - Inserted sentiment data for UUID: 671a5bb2fac80c4f87f16140
+2024-10-26 13:57:30,293 - INFO - Inserted sentiment data for UUID: 671a5bb2fac80c4f87f16141
+2024-10-26 13:57:30,294 - INFO - Inserted sentiment data for UUID: 671a5bb2fac80c4f87f16142
+2024-10-26 13:57:30,296 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16144
+2024-10-26 13:57:30,298 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16145
+2024-10-26 13:57:30,300 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16146
+2024-10-26 13:57:30,301 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16147
+2024-10-26 13:57:30,303 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16148
+2024-10-26 13:57:30,305 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16149
+2024-10-26 13:57:30,307 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f1614a
+2024-10-26 13:57:30,308 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f1614b
+2024-10-26 13:57:30,310 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f1614c
+2024-10-26 13:57:30,311 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f1614d
+2024-10-26 13:57:30,313 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f1614e
+2024-10-26 13:57:30,314 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f1614f
+2024-10-26 13:57:30,315 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16150
+2024-10-26 13:57:30,317 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16151
+2024-10-26 13:57:30,318 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16152
+2024-10-26 13:57:30,319 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16153
+2024-10-26 13:57:30,321 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16154
+2024-10-26 13:57:30,322 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16155
+2024-10-26 13:57:30,323 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16156
+2024-10-26 13:57:30,324 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16157
+2024-10-26 13:57:30,326 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16158
+2024-10-26 13:57:30,327 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16159
+2024-10-26 13:57:30,329 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f1615a
+2024-10-26 13:57:30,330 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f1615b
+2024-10-26 13:57:30,332 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f1615c
+2024-10-26 13:57:30,333 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f1615d
+2024-10-26 13:57:30,334 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f1615e
+2024-10-26 13:57:30,335 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f1615f
+2024-10-26 13:57:30,336 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16160
+2024-10-26 13:57:30,337 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16161
+2024-10-26 13:57:30,338 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16162
+2024-10-26 13:57:30,339 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16163
+2024-10-26 13:57:30,340 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16164
+2024-10-26 13:57:30,341 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16165
+2024-10-26 13:57:30,342 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16166
+2024-10-26 13:57:30,344 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16167
+2024-10-26 13:57:30,345 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16168
+2024-10-26 13:57:30,346 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16169
+2024-10-26 13:57:30,347 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f1616a
+2024-10-26 13:57:30,348 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f1616b
+2024-10-26 13:57:30,349 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f1616c
+2024-10-26 13:57:30,350 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f1616d
+2024-10-26 13:57:30,352 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f1616e
+2024-10-26 13:57:30,353 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f1616f
+2024-10-26 13:57:30,354 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16170
+2024-10-26 13:57:30,355 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16171
+2024-10-26 13:57:30,356 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16172
+2024-10-26 13:57:30,357 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16173
+2024-10-26 13:57:30,358 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16174
+2024-10-26 13:57:30,359 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16175
+2024-10-26 13:57:30,361 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16176
+2024-10-26 13:57:30,362 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16177
+2024-10-26 13:57:30,363 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16178
+2024-10-26 13:57:30,365 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16179
+2024-10-26 13:57:30,366 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f1617a
+2024-10-26 13:57:30,368 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f1617b
+2024-10-26 13:57:30,369 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f1617c
+2024-10-26 13:57:30,370 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f1617d
+2024-10-26 13:57:30,371 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f1617e
+2024-10-26 13:57:30,372 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f1617f
+2024-10-26 13:57:30,373 - INFO - Inserted sentiment data for UUID: 671a5bdffac80c4f87f16180
+2024-10-26 13:57:30,374 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f16182
+2024-10-26 13:57:30,375 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f16183
+2024-10-26 13:57:30,377 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f16184
+2024-10-26 13:57:30,378 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f16185
+2024-10-26 13:57:30,379 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f16186
+2024-10-26 13:57:30,380 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f16187
+2024-10-26 13:57:30,381 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f16188
+2024-10-26 13:57:30,382 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f16189
+2024-10-26 13:57:30,383 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f1618a
+2024-10-26 13:57:30,384 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f1618b
+2024-10-26 13:57:30,385 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f1618c
+2024-10-26 13:57:30,386 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f1618d
+2024-10-26 13:57:30,388 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f1618e
+2024-10-26 13:57:30,389 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f1618f
+2024-10-26 13:57:30,390 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f16190
+2024-10-26 13:57:30,392 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f16191
+2024-10-26 13:57:30,393 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f16192
+2024-10-26 13:57:30,394 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f16193
+2024-10-26 13:57:30,396 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f16194
+2024-10-26 13:57:30,397 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f16195
+2024-10-26 13:57:30,399 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f16196
+2024-10-26 13:57:30,401 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f16197
+2024-10-26 13:57:30,402 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f16198
+2024-10-26 13:57:30,403 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f16199
+2024-10-26 13:57:30,404 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f1619a
+2024-10-26 13:57:30,406 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f1619b
+2024-10-26 13:57:30,407 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f1619c
+2024-10-26 13:57:30,408 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f1619d
+2024-10-26 13:57:30,410 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f1619e
+2024-10-26 13:57:30,411 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f1619f
+2024-10-26 13:57:30,413 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f161a0
+2024-10-26 13:57:30,414 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f161a1
+2024-10-26 13:57:30,416 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f161a2
+2024-10-26 13:57:30,417 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f161a3
+2024-10-26 13:57:30,418 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f161a4
+2024-10-26 13:57:30,420 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f161a5
+2024-10-26 13:57:30,422 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f161a6
+2024-10-26 13:57:30,423 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f161a7
+2024-10-26 13:57:30,425 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f161a8
+2024-10-26 13:57:30,426 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f161a9
+2024-10-26 13:57:30,428 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f161aa
+2024-10-26 13:57:30,429 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f161ab
+2024-10-26 13:57:30,431 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f161ac
+2024-10-26 13:57:30,432 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f161ad
+2024-10-26 13:57:30,433 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f161ae
+2024-10-26 13:57:30,435 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f161af
+2024-10-26 13:57:30,438 - INFO - Inserted sentiment data for UUID: 671a5c06fac80c4f87f161b0
+2024-10-26 13:57:30,438 - INFO - Data loading complete.
+2024-10-26 13:57:30,449 - INFO - Transaction committed successfully.
+2024-10-26 13:57:30,451 - INFO - PostgreSQL cursor closed.
+2024-10-26 13:57:30,451 - INFO - PostgreSQL connection closed.
+2024-10-26 13:57:30,451 - INFO - Migration process finished.
