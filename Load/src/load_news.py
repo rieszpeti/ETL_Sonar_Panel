@@ -4,17 +4,10 @@ from dotenv import load_dotenv
 import os
 import logging
 
+from logging_config import setup_logging
+
 load_dotenv()
-
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler('migration.log'),
-        logging.StreamHandler()
-    ]
-)
-
+logger = logging.getLogger("news")
 
 def connect_to_mongodb():
     """Connects to MongoDB and returns the collection."""
@@ -92,4 +85,5 @@ def main():
 
 
 if __name__ == "__main__":
+    setup_logging()
     main()

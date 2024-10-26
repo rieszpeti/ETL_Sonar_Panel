@@ -1,3 +1,4 @@
 pip~=24.0
 python-dotenv~=1.0.1
 pymongo~=4.10.1
+psycopg2>=2.9,<3.0

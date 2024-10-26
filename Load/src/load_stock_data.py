@@ -5,10 +5,11 @@ import logging
 
 from dotenv import load_dotenv
 
-load_dotenv()
+from logging_config import setup_logging
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("stock_data")
+
+load_dotenv()
 
 
 def connect_postgresql(db_name="PG_DBNAME", host="PG_HOST", port="PG_PORT"):
@@ -28,31 +29,43 @@ def connect_postgresql(db_name="PG_DBNAME", host="PG_HOST", port="PG_PORT"):
         return None
 
 
-def load_stock_data(source_conn, target_conn):
+def fetch_stock_data(source_conn):
+    """Generator to fetch stock data from the source database."""
     try:
-        stock_datas = []
-
         with source_conn.cursor() as cursor:
-            cursor.execute("""
-                SELECT * 
-                FROM stock.stock_data;
-            """)
-
-            stock_datas = cursor.fetchall()
-
-        logger.info(f"Successfully loaded {len(stock_datas)} stock records.")
-        for stock_data in stock_datas:
-            with target_conn.cursor() as target_cursor:
-                target_cursor.execute("""
-                    INSERT INTO star.stock_data ("date", symbol, price)
-                    VALUES (%s, %s, %s);
-                """, (stock_data[0], stock_data[1], stock_data[2]))
-
-            target_conn.commit()
-
+            cursor.execute("""SELECT * FROM stock.stock_data;""")
+            while True:
+                stock_data = cursor.fetchone()
+                if stock_data is None:
+                    break
+                yield stock_data
+                logger.info(f"Fetched stock record: {stock_data}")
     except Exception as e:
-        logger.error(f"Error loading stock data: {e}")
+        logger.error(f"Error fetching stock data: {e}")
+
+
+def insert_stock_data(target_conn, stock_data):
+    """Insert a single stock data record into the target database."""
+    try:
+        with target_conn.cursor() as target_cursor:
+            target_cursor.execute(""" 
+                INSERT INTO star.stock_data ("date", symbol, price)
+                VALUES (%s, %s, %s)
+                ON CONFLICT (date, symbol) DO NOTHING;
+            """, (stock_data[0], stock_data[1], stock_data[2]))
+
+        target_conn.commit()
+        logger.info(f"Inserted stock record: {stock_data}")
+    except Exception as e:
+        logger.error(f"Error inserting stock data: {e}")
         target_conn.rollback()
+
+
+def load_stock_data(source_conn, target_conn):
+    """Load stock data from source to target database."""
+    stock_generator = fetch_stock_data(source_conn)
+    for stock_data in stock_generator:
+        insert_stock_data(target_conn, stock_data)
 
 
 def main():
@@ -72,4 +85,5 @@ def main():
 
 
 if __name__ == '__main__':
+    setup_logging()
     main()

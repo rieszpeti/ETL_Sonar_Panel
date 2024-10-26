@@ -42,23 +42,23 @@ services:
   #     - timescaledb
   #     - mongodb
 
-#  stock_market_extractor:
-#    build:
-#      context: ./Staging/src/stock_market_extract/
-#      dockerfile: Dockerfile
-#    container_name: stock_market_extractor
-#    env_file:
-#      - path: Staging/src/stock_market_extract/.env
-#      - path: ./Staging/docker/docker_envs/stock_market_extractor.env
-#    environment:
-#      - TZ=America/New_York
-#    volumes:
-#      - ./Staging/docker/logs/stock_market_extractor:/app/logs
-#    depends_on:
-#      timescaledb:
-#        condition: service_healthy
+  #  stock_market_extractor:
+  #    build:
+  #      context: ./Staging/src/stock_market_extract/
+  #      dockerfile: Dockerfile
+  #    container_name: stock_market_extractor
+  #    env_file:
+  #      - path: Staging/src/stock_market_extract/.env
+  #      - path: ./Staging/docker/docker_envs/stock_market_extractor.env
+  #    environment:
+  #      - TZ=America/New_York
+  #    volumes:
+  #      - ./Staging/docker/logs/stock_market_extractor:/app/logs
+  #    depends_on:
+  #      timescaledb:
+  #        condition: service_healthy
 
-  # restart the image_process_extractor and 
+  # restart the image_process_extractor and
   # news_extractor and stock_market_extractor
   # once a week
   # not tested yet
@@ -77,6 +77,31 @@ services:
   #         fi
   #         sleep 60
   #       done
+
+  load_to_star:
+    build:
+      context: ./Load
+      dockerfile: Dockerfile
+    container_name: load_to_star
+    environment:
+      - OTLP_ENDPOINT=http://otel-collector:4318
+      - OTEL_LOG_LEVEL=INFO
+    env_file:
+      - path: Load/src/.env
+      - path: ./Load/docker/docker_envs/.env
+    volumes:
+      - ./Load/docker/logs:/app/logs
+    depends_on:
+      timescaledb:
+        condition: service_healthy
+      postgres_star:
+        condition: service_healthy
+#     image_process_extractor:
+#       condition: service_completed_successfully
+#     news_extractor:
+#       condition: service_completed_successfully
+#     stock_market_extractor:
+#       condition: service_completed_successfully
 
   mongodb:
     image: mongo:latest
