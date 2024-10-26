@@ -1,5 +1,4 @@
 import psycopg2
-from pymongo import MongoClient
 from dotenv import load_dotenv
 import os
 import logging
