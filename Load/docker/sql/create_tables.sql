@@ -8,7 +8,8 @@ CREATE TABLE IF NOT EXISTS star.images (
     image_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     width INT NOT NULL,
     height INT NOT NULL,
-    filename TEXT NOT NULL UNIQUE
+    filename TEXT NOT NULL UNIQUE,
+    date_fetched DATE NOT NULL DEFAULT NOW()
 );
 
 CREATE TABLE IF NOT EXISTS star.coordinates (
