@@ -1,6 +1,0 @@
-{
-    "stock_market": {
-        "symbols": ["FSLR", "ENPH", "SEDG", "CSIQ", "RUN", "ARRY"],
-        "query_start": "2020-01-01"
-    }
-}

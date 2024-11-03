@@ -1,22 +1,18 @@
 services:
-  # image_process_extractor:
-  #   build:
-  #     context: ./Staging/src/image_processing_extract/
-  #     dockerfile: Dockerfile
-  #   container_name: image_process_extractor
-  #   env_file:
-  #     - path: Staging/src/image_processing_extract/.env
-  #     - path: ./Staging/docker/docker_envs/image_process_extractor.env
-  #   volumes:
-  #     - ./Staging/docker/logs/image_process_extractor:/app/logs
-  #     - satellite_images:/app/resources/roof_satellite/pictures
-  #   depends_on:
-  #     mongodb:
-  #       condition: service_started
-  #     localstack_container:
-  #       condition: service_healthy
-  #     create_bucket:
-  #       condition: service_completed_successfully
+#  satellite_image_processing:
+#    build:
+#      context: ./app_satellite_image_processing/src/image_processing/
+#      dockerfile: Dockerfile
+#    container_name: satellite_image_processing
+#    env_file:
+#      - path: ./app_satellite_image_processing/src/image_processing/.env
+#      - path: ./app_satellite_image_processing/docker/docker_envs/.env
+#    volumes:
+#      - ./app_satellite_image_processing/docker/logs/image_process_extractor:/app/logs
+#      - satellite_images:/app/resources/roof_satellite/pictures
+#    depends_on:
+#      postgres_satellite_image_processing:
+#        condition: service_healthy
 
   upload_images_webpage:
     build:
@@ -28,167 +24,147 @@ services:
     volumes:
       - satellite_images:/app/uploads
 
-  # news_extractor:
-  #   build:
-  #     context: ./Staging/src/news_extract/
-  #     dockerfile: Dockerfile
-  #   container_name: news_extractor
-  #   env_file:
-  #     - path: Staging/src/news_extract/.env
-  #     - path: ./Staging/docker/docker_envs/news_extractor.env
-  #   volumes:
-  #     - ./Staging/docker/logs/news_extractor:/app/logs
-  #   depends_on:
-  #     - timescaledb
-  #     - mongodb
-
-  #  stock_market_extractor:
-  #    build:
-  #      context: ./Staging/src/stock_market_extract/
-  #      dockerfile: Dockerfile
-  #    container_name: stock_market_extractor
-  #    env_file:
-  #      - path: Staging/src/stock_market_extract/.env
-  #      - path: ./Staging/docker/docker_envs/stock_market_extractor.env
-  #    environment:
-  #      - TZ=America/New_York
-  #    volumes:
-  #      - ./Staging/docker/logs/stock_market_extractor:/app/logs
-  #    depends_on:
-  #      timescaledb:
-  #        condition: service_healthy
-
-  # restart the image_process_extractor and
-  # news_extractor and stock_market_extractor
-  # once a week
-  # not tested yet
-  # restarter:
-  #   image: docker:cli
-  #   restart: unless-stopped
-  #   volumes: ["/var/run/docker.sock:/var/run/docker.sock"]
-  #   entrypoint: ["/bin/sh", "-c"]
-  #   command:
-  #     - |
-  #       while true; do
-  #         if [ "$$(date +'%u')" -eq 7 ] && [ "$$(date +'%H:%M')" = '20:00' ]; then
-  #           docker restart news_extractor
-  #           docker restart image_process_extractor
-  #           docker restart stock_market_extractor
-  #         fi
-  #         sleep 60
-  #       done
-
-  load_to_star:
+  extract_app:
     build:
-      context: ./Load
+      context: ./etl/1_Stage/src/
       dockerfile: Dockerfile
-    container_name: load_to_star
-    environment:
-      - OTLP_ENDPOINT=http://otel-collector:4318
-      - OTEL_LOG_LEVEL=INFO
+    container_name: extract_app
     env_file:
-      - path: Load/src/.env
-      - path: ./Load/docker/docker_envs/.env
+      - path: ./etl/1_Stage/src/.env
+      - path: ./etl/1_Stage/docker/docker_envs/.env
     volumes:
-      - ./Load/docker/logs:/app/logs
+      - ./etl/1_Stage/docker/logs/:/app/logs
     depends_on:
-      timescaledb:
+      postgres_satellite_image_processing:
         condition: service_healthy
-      postgres_star:
+      postgres_stage:
         condition: service_healthy
-#     image_process_extractor:
-#       condition: service_completed_successfully
-#     news_extractor:
-#       condition: service_completed_successfully
-#     stock_market_extractor:
-#       condition: service_completed_successfully
+      # satellite_image_processing:
+        # condition: service_completed_successfully
 
-  mongodb:
-    image: mongo:latest
-    container_name: mongodb
-    ports:
-      - "27017:27017"
-    environment:
-      - MONGO_INITDB_DATABASE=satellite-image
+  transform_app:
+    build:
+      context: ./etl/2_History/src/
+      dockerfile: Dockerfile
+    container_name: transform_app
+    env_file:
+      - path: ./etl/2_history/src/.env
+      - path: ./etl/2_history/docker/docker_envs/.env
     volumes:
-      - mongo_data:/data/db
+      - ./etl/2_history/docker/logs/:/app/logs
+    depends_on:
+      postgres_stage:
+        condition: service_healthy
+      postgres_history:
+        condition: service_healthy
+      extract_app:
+        condition: service_completed_successfully
 
-  localstack_container:
-      image: localstack/localstack
-      container_name: localstack_container
-      ports:
-        - "4566:4566"
-        - "4571:4571"
-      environment:
-        - SERVICES=s3
-        - AWS_ACCESS_KEY_ID=test
-        - AWS_SECRET_ACCESS_KEY=test
-      command: [ "localstack", "start" ]
-
-  create_bucket:
-     image: amazon/aws-cli
-     container_name: create_bucket
-     depends_on:
-       - localstack_container
-     entrypoint: ["sh", "-c"]
-     command: |
-       "sleep 8 && \
-        aws --endpoint-url=http://host.docker.internal:4566 s3api create-bucket --bucket satellite-image --region us-east-1 && \
-        aws --endpoint-url=http://host.docker.internal:4566 s3 cp /var/lib/localstack s3://satellite-image/ --recursive && \
-        cp -r /var/lib/localstack/* /bucket_data"
-     environment:
-       - AWS_ACCESS_KEY_ID=test
-       - AWS_SECRET_ACCESS_KEY=test
+  load_app:
+     build:
+       context: ./Load
+       dockerfile: Dockerfile
+     container_name: load_app
+     env_file:
+       - path: etl/3_DM/src/.env
+       - path: ./etl/3_DM/docker/docker_envs/.env
      volumes:
-       - ./Staging/src/image_processing_extract/resources/roof_satellite/pictures:/var/lib/localstack
-       - satellite_images:/bucket_data
+       - ./etl/3_DM/docker/logs:/app/logs
+     depends_on:
+       postgres_history:
+         condition: service_healthy
+       postgres_star:
+         condition: service_healthy
+       transform_app:
+         condition: service_completed_successfully
 
-  timescaledb:
-    image: timescale/timescaledb:latest-pg16
-    container_name: timescaledb
+  postgres_satellite_image_processing:
+    build:
+      context: ./app_satellite_image_processing/postgres/
+      dockerfile: Dockerfile
+    container_name: postgres_satellite_image_processing
     ports:
-      - "5432:5432"
+      - "5432:5432" 
     environment:
-      - POSTGRES_DB=stock_data
+      - POSTGRES_DB=satellite_image_processing
+      - PGUSER=test
+      - POSTGRES_USER=test          
+      - POSTGRES_PASSWORD=test        
+    volumes:
+      - satellite_image_processing:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d satellite_image_processing" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  postgres_stage:
+    build:
+      context: ./etl/1_Stage/postgres/
+      dockerfile: Dockerfile
+    container_name: postgres_stage
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_DB=stage
       - PGUSER=test
       - POSTGRES_USER=test
       - POSTGRES_PASSWORD=test
     volumes:
-      - timescaledb_data:/var/lib/postgresql/data
-      - ./Staging/docker/sql/create_tables.sql:/docker-entrypoint-initdb.d/initdb.sql
+      - stage:/var/lib/postgresql/data
     restart: unless-stopped
     healthcheck:
-      test: [ "CMD-SHELL", "pg_isready -d postgres" ] 
+      test: [ "CMD-SHELL", "pg_isready -d stage" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  postgres_history:
+    build:
+      context: ./etl/2_History/postgres/
+      dockerfile: Dockerfile
+    container_name: postgres_history
+    ports:
+      - "5434:5432"
+    environment:
+      - POSTGRES_DB=history
+      - PGUSER=test
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=test
+    volumes:
+      - history:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d history" ]
       interval: 30s
       timeout: 10s
       retries: 5
 
   postgres_star:
-    image: postgres:latest 
+    build:
+      context: ./etl/3_DM/postgres/
+      dockerfile: Dockerfile
     container_name: postgres_star
     ports:
-      - "5433:5432" 
+      - "5435:5432"
     environment:
       - POSTGRES_DB=star
       - PGUSER=test
-      - POSTGRES_USER=test          
-      - POSTGRES_PASSWORD=test        
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=test
     volumes:
-      - postgres_data:/var/lib/postgresql/data
-      - ./Load/docker/sql/create_tables.sql:/docker-entrypoint-initdb.d/initdb.sql
+      - star:/var/lib/postgresql/data
     restart: unless-stopped
     healthcheck:
-      test: [ "CMD-SHELL", "pg_isready -d star" ] 
+      test: [ "CMD-SHELL", "pg_isready -d star" ]
       interval: 30s
       timeout: 10s
       retries: 5
 
 volumes:
-  mongo_data:
-    external: true
-  timescaledb_data:
-    external: true
   satellite_images:
-    external: true
-  postgres_data: 
-    external: true
+  satellite_image_processing:
+  stage:
+  history:
+  star:

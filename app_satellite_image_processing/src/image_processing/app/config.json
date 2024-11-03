@@ -1,0 +1,15 @@
+{
+    "image_folder_path": "../resources/roof_satellite/pictures",
+    "models_config": [
+        {
+            "project_name": "roof-type-classifier-bafod",
+            "version_number": 1,
+            "model_name": "satellite_image_model"
+        },
+        {
+            "project_name": "solar-panels-81zxz",
+            "version_number": 1,
+            "model_name": "streetview_image_model"
+        }
+    ]
+}

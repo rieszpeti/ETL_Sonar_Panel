@@ -4,3 +4,5 @@ Load/venv
 venv
 Staging/docker
 Load/src/__pycache__
+*.log
+etl/3_DM/src/__pycache__
