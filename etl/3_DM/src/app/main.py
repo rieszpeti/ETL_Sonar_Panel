@@ -127,7 +127,7 @@ def transfer_images_and_coordinates(history_cursor, star_cursor):
     # Select image data along with latitude and longitude where valid_to is NULL in both tables
     history_cursor.execute(
         """
-        SELECT i.image_id, i.width, i.height, i.filename, c.latitude, c.longitude
+        SELECT i.image_id, i.width, i.height, i.filename, c.latitude, c.longitude, i.image_data
         FROM history.images AS i
         JOIN history.coordinates AS c ON i.image_id = c.image_id
         WHERE i.valid_to IS NULL AND c.valid_to IS NULL;
@@ -139,8 +139,8 @@ def transfer_images_and_coordinates(history_cursor, star_cursor):
     for image in images:
         star_cursor.execute(
             """
-            INSERT INTO star.dim_images (image_id, width, height, filename, latitude, longitude)
-            VALUES (%s, %s, %s, %s, %s, %s)
+            INSERT INTO star.dim_images (image_id, width, height, filename, latitude, longitude, image_data)
+            VALUES (%s, %s, %s, %s, %s, %s, %s)
             ON CONFLICT (image_id) DO NOTHING;
             """,
             image

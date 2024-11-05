@@ -12,6 +12,7 @@ CREATE TABLE IF NOT EXISTS dim_images (
     filename TEXT NOT NULL,
     latitude DECIMAL(10, 5) NOT NULL,
     longitude DECIMAL(10, 5) NOT NULL,
+    image_data BYTEA NOT NULL,
     date_loaded TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
